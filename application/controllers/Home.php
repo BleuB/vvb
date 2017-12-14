@@ -16,6 +16,16 @@ class Home extends CI_Controller {
     }
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->dataH['title'] = "Vacances vertes et bleues";
+		$this->dataH['description'] = "vacances vertes et bleues";
+
+
+
+
+		//affichage
+		$this->load->view('common/head',$this->dataH);
+		$this->load->view('common/header');
+		$this->load->view('home/accueil');
+		$this->load->view('common/footer');
 	}
 }
