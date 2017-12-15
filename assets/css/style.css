@@ -1,0 +1,50 @@
+/* bar de navigation */
+
+.navbar
+{
+	background-color:  #1D8AC9;
+
+}
+
+.navbar-nav
+{
+	width: 100%;
+}
+
+.navbar-fixed-top .navbar-nav > li > a
+{
+	color: white;
+	margin-right: 15%;
+}
+.navbar-fixed-top .navbar-nav > li > a:hover
+{
+	background-color:transparent; 
+}
+
+
+#first
+{
+	
+	margin-left: 20%;
+}
+
+#passAnn 
+{
+	position: relative;
+	background-color: #E68D06;
+	border-radius:5px;
+	left:40%;
+}
+
+#passAnn a
+{
+	margin-right: 0;
+}
+
+/* header recherche */
+#head-rech
+{
+	position: relative;
+	top:50%;
+	background-image: url("bg/bg.jpg");
+}
