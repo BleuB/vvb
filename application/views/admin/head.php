@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-
+	<META NAME="robots" CONTENT="noindex,nofollow">
 	<title><?php echo $title; ?></title>
 
 	<meta name="description" content="<?php echo $description; ?>"/>

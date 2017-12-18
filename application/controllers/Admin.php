@@ -32,18 +32,49 @@ class Admin extends CI_Controller {
 	{
 		$this->dataH['title'] = "Administration";
 		$this->dataH['description'] = "";
-
+		$this->dataH['thispage'] = "accueil";
+		if ($this->isco) {
+			$this->dataHD['logged'] = true;
+		}
+		else{
+			$this->dataHD['logged'] = false;
+		}
 
 
 
 		//affichage
 		$this->load->view('admin/head',$this->dataH);
-		$this->load->view('admin/header');
+		$this->load->view('admin/header',$this->dataHD);
 		if (!$this->isco) {
 			$this->load->view('admin/register');
 		}
 		else{
 			$this->load->view('admin/accueil');
+		}
+		$this->load->view('admin/footer');
+	}
+	public function pub()
+	{
+		$this->dataH['title'] = "Administration";
+		$this->dataH['description'] = "";
+		$this->dataH['thispage'] = "pub";
+		if ($this->isco) {
+			$this->dataHD['logged'] = true;
+		}
+		else{
+			$this->dataHD['logged'] = false;
+		}
+
+
+
+		//affichage
+		$this->load->view('admin/head',$this->dataH);
+		$this->load->view('admin/header',$this->dataHD);
+		if (!$this->isco) {
+			$this->load->view('admin/register');
+		}
+		else{
+			$this->load->view('admin/gestionpub');
 		}
 		$this->load->view('admin/footer');
 	}
