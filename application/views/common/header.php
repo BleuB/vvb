@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <body>
 	<header>
-
+			<!-- -barre de navigation -->
 			<div id="nav">
 			  <div id="menu" class="navbar navbar-fixed-top">
 			      <div class="container">
@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			            <li class="hidden-sm hidden-xs">
 			              <a href="<?php echo base_url(); ?>"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
 			            </li>        
-			            <li><a href="#">Annonce</a>
+			            <li><a href="#">Annonces</a>
 			            </li>
 			            <li><a href="#">Conseil</a>
 			            </li>
@@ -36,9 +36,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			      <!--/.contatiner -->
 			</div>
 
-			<div id="head-rech">
-				
-			</div>
 		</div>
 		
 	</header>
