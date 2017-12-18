@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		                <span class="icon-bar"></span>
 		                <span class="icon-bar"></span>
 		            </button>
-		            <a class="navbar-brand" href="<?php echo site_url('accueil'); ?>" >
+		            <a class="navbar-brand" href="<?php echo site_url(''); ?>" >
 		                <img class="img-responsive" style="max-height: 40px;" src="<?php echo img_url("logos/logo.png"); ?>" />
 		            </a>
 		        </div>
@@ -29,10 +29,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  					<li <?php if ($thispage == 'accueil') {echo 'class="active-link"';}?>>
                         <a href="<?php echo site_url('admin'); ?>" ><i class="fa fa-desktop "></i>Accueil</a>
                     </li>
-                    <!-- <li <?php if ($thispage == 'nouveautes') {echo 'class="active-link"';}?>>
-                        <a href="<?php echo site_url('admin/nouveautes'); ?>"><i class="fa fa-th-list"></i>Nouveautés</a>
+                    <li <?php if ($thispage == 'pub') {echo 'class="active-link"';}?>>
+                        <a href="<?php echo site_url('admin/pub'); ?>"><i class="fa fa-th-list"></i>Publicités</a>
                     </li>
-                    <li <?php if ($thispage == 'produits') {echo 'class="active-link"';}?>>
+                    <!-- <li <?php if ($thispage == 'produits') {echo 'class="active-link"';}?>>
                         <a href="<?php echo site_url('admin/produits'); ?>"><i class="fa fa-edit"></i>Produits</a>
                     </li>
                     <li <?php if ($thispage == 'clients') {echo 'class="active-link"';}?>>
