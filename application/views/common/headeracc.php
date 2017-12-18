@@ -67,8 +67,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div id="rech-map" class="col-md-4 ">
 						<h3>Rechercher par régions: </h3>
 						<div class="row">
-							<div id="cmap" class="col-md-6 col-sm-12"></div>
-							<div class="col-md-6 col-xs-12">
+							<div id="cmap" class="col-md-6"></div>
+							<div class="col-md-4 col-md-offset-1">
 								<ul class="list-unstyled">
 						          <li><a href="<?php echo site_url('recherche');?>?region=6&alsace" class="alsace">Grand Est</a></li>
 						          <li><a href="<?php echo site_url('recherche');?>?region=10&aquitaine"  class="aquitaine">Nouvelle Aquitaine</a></li>
