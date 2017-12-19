@@ -55,6 +55,7 @@ class Admin extends CI_Controller {
 	}
 	public function pub()
 	{
+		$this->load->model('Pub_model');
 		$this->dataH['title'] = "Administration";
 		$this->dataH['description'] = "";
 		$this->dataH['thispage'] = "pub";
@@ -64,7 +65,7 @@ class Admin extends CI_Controller {
 		else{
 			$this->dataHD['logged'] = false;
 		}
-
+		$this->dataC['pubaccueil'] = $this->Pub_model->get_pub_admin('acc');
 
 
 		//affichage
@@ -74,7 +75,7 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/register');
 		}
 		else{
-			$this->load->view('admin/gestionpub');
+			$this->load->view('admin/gestionpub',$this->dataC);
 		}
 		$this->load->view('admin/footer');
 	}
