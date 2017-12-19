@@ -10,61 +10,53 @@ h2
 
 /* bar de navigation */
 
-.navbar
+.nav
 {
 	background-color:  #1D8AC9;
-	margin-bottom: 50px;
-
-}
-
-.navbar-nav
-{
-	width: 100%;
-}
-
-.navbar-fixed-top .navbar-nav > li > a
-{
-	color: white;
-	margin-right: 15%;
-}
-.navbar-fixed-top .navbar-nav > li > a:hover,.navbar-fixed-top .navbar-nav > li > a:active
-{
-	background-color:transparent; 
-
-}
-
-
-#first
-{
 	
-	margin-left: 20%;
-}
 
-#passAnn 
-{
-	position: relative;
-	background-color: #E68D06;
-	border-radius:5px;
-	left:40%;
-}
 
-#passAnn a
-{
-	margin-right: 0;
 }
+ 
+ .nav li
+ {
+ 	display: inline-block;
+ 	margin-left: 2%;
+ 	
+ }
+
+ .nav li a
+ {
+ 	color: white;
+ }
+
+ .nav .col-md-12
+ {
+ 	padding: 0;
+ }
+
+ #passe_ann
+ {
+ 	background-color: #E68D06;
+ 	border-radius: 5px;
+ }
+
+/*--------------------------------content accueil---------------------------------*/
 
 /* header recherche */
 #head-rech
 {
-	position:relative;
-	margin-top: 50px;
 	background-image: url("bg/bg.jpg");
-	height: 500px;
+	background-color: white;
+	background-repeat: no-repeat;
+
+	
 }
 
-#ligne_rech
+#rech-bar,#rech-map
 {
-	margin-top: 3%;
+	margin-top: 51px;
+	margin-bottom: 50px;
 }
 
 #rech-bar
@@ -73,6 +65,7 @@ h2
 	color: white;
 	border-radius: 5px;
 	position: relative;
+	padding:15px;
 }
 
 #rech-bar a
@@ -94,6 +87,8 @@ h2
 	border-radius: 5px;
 
 }
+
+
 
 #btn-rech
 {
@@ -135,6 +130,20 @@ svg
 	margin-top: 5%;
 }
 
+/*panneau publicitaire*/
+
+
+.lignepub
+{
+ margin-top: 3%;
+}
+
+#panneau_pub
+{
+	margin-top: 3%;
+	padding-left: 3%;
+}
+/*---------------------------------------annonces-----------------------------*/
 
 /*annnonce*/
 
@@ -174,11 +183,14 @@ svg
 	color: white;
 	font-size: 1.3em;
 }
-/*panneau publicitaire*/
 
-#lignepub img
+/*-----------------------------Conseil------------------------------*/
+
+#conseils
 {
-	margin-top:3%;
+	margin-top: 50px;
+	text-align: center;
+	border-top:solid 2px #1D8AC9;
 }
 
 /* footer*/
@@ -197,9 +209,7 @@ footer.principal a:hover{
 footer.principal h4{
 	margin-top: 0;
 }
-footer.principal > div > *:not(:last-child){
-	/*border-right: 1px dashed #fff;*/
-}
+
 footer.principal .vr::before{
 	content: "";
 	position: absolute;
@@ -214,4 +224,27 @@ footer.principal .hr{
 }
 footer.principal > div:last-child{
 	padding: 20px 0;
+}
+
+#blockvide
+{
+	height: 350px;
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 990px) { 
+	#rech-map{ 
+		text-align: center;
+	}
+
+	#head-rech
+	{
+		background-image: none;
+	}
+
+	#passAnn 
+	{
+		left:0;
+	}
 }

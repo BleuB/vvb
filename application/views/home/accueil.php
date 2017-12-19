@@ -1,7 +1,81 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<div class="container-fluid">
+
+	
+	<!-- recherche locations-->
+	<div id="head-rech" class="row">
+		<div  id="rech-bar" class="col-lg-4 col-md-6 col-lg-offset-2">
+			<div class="row">
+				<div class="col-md-12">
+				<h3>Recherche rapide: </h3>
+					<div class="row">
+						<div class="col-md-12 form-group">
+							<label>Mots clés: </label>
+							<input type="text" class="form-control" placeholder="Exemple: hôtel, piscine, bretagne, ...">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<input type="text" class="form-control" placeholder="recherche par référence">
+						</div>
+					</div>
+					<div class="row">
+						<a class="col-md-4" href="">Recherche avancée</a>
+							<div class="col-md-2 col-lg-offset-5 col-md-offset-3">
+								<button type="submit" class="btn btn-default" id="btn-rech">Rechercher</button>
+
+							</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+				</div>
+			</div>
+		</div>
+
+		<div id="rech-map" class="col-lg-4 col-md-6">
+			<h3>Rechercher par régions: </h3>
+			<div class="row">
+
+				<div class="col-md-6">
+					<div id="cmap"></div>
+				</div>
+				<div class="col-md-4 col-lg-offset-1 col-md-offset-2">
+					<ul class="list-unstyled">
+						<li><a href="<?php echo site_url('recherche');?>?region=6&alsace" class="alsace">Grand Est</a></li>
+						<li><a href="<?php echo site_url('recherche');?>?region=10&aquitaine"  class="aquitaine">Nouvelle Aquitaine</a></li>
+						<li><a href="<?php echo site_url('recherche');?>?region=1&auvergne" class="auvergne">Auvergne-Rhône-Alpes</a></li>
+						<li><a href="<?php echo site_url('recherche');?>?region=2&bourgogne" class="bourgogne">Bourgogne-Franche-Comté</a></li>
+						<li><a href="<?php echo site_url('recherche');?>?region=3&bretagne" class="bretagne">Bretagne</a></li>
+						<li><a href="<?php echo site_url('recherche');?>?region=4&centre" class="centre">Centre-Val de Loire</a></li>
+						<li><a href="<?php echo site_url('recherche');?>?region=5&corse" class="corse">Corse</a></li>
+						<li><a href="<?php echo site_url('recherche');?>?region=8&ile-de-france" class="ile">Île-de-France </a></li>
+						<li><a href="<?php echo site_url('recherche');?>?region=11&languedoc" class="languedoc">Occitanie</a></li>
+						<li><a href="<?php echo site_url('recherche');?>?region=7&hauts-de-france" class="nord">Hauts de France</a></li>
+						<li><a href="<?php echo site_url('recherche');?>?region=9&normandie" class="normandie">Normandie</a></li>
+						<li><a href="<?php echo site_url('recherche');?>?region=12&pays-de-loire" class="loire">Pays de la Loire</a></li>
+						<li><a href="<?php echo site_url('recherche');?>?region=13&provence" class="provence">Provence-Alpes-Côte d'Azur</a></li>
+						
+						<br>
+										         
+					 	<li><a href="<?php echo site_url('recherche');?>?region=14&dom-tom" class="domtom">Dom-Tom</a></li>
+										         
+						<br>
+						
+						<li><a href="<?php echo site_url('recherche');?>?locations-vacances" class="domtom">Voir toutes</a></li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	<div class="row"> 
 		<div class="col-md-4 paragraphe">
@@ -34,7 +108,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<h2 id="titre_ann">Top annonces</h2>
 
 			<div class="row annonce">
-				<div class="col-md-3 col-xs-3">
+				<div class="col-md-3 col-xs-5">
 					<img src="<?php echo img_url("3.png")?>" class="thumbnail img-responsive" />
 				</div>
 				<div class="col-md-6 col-xs-12">
@@ -52,10 +126,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 
 			<div class="row annonce">
-				<div class="col-md-3">
+				<div class="col-md-3 col-xs-5">
 					<img src="<?php echo img_url("3.png")?>" class="thumbnail img-responsive" />
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 col-xs-12">
 					<a class="lien_ann" href=""><h3>Chambre d'hôtes MYRTILLE de caractère</h3></a>
 					<h4>Loire (auvergne-rhône-alpes)</h4>
 					<p>Dans un cadre bucolique,verdoyant,fleuri et arboré,venez vous reposer dans l'une de nos 5 chambres.Près de lieux touristiques tels volcans,villages pittoresques et multiples chemins de randonné.</p>
@@ -72,19 +146,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		</div>
 		<div class="col-md-4" id="panneau_pub">
-			<div class="row lignepub">
-				<div class="col-md-12">
-					<img src="<?php echo img_url("pubs/_10D-home2.png");?>">
+			<div class="row">
+				<div class="col-md-12 lignepub">
+					<a  href=""><img class="img-responsive" src="<?php echo img_url("pubs/_10D-home2.png");?>"></a>
 				</div>
 			</div>
-			<div class="row lignepub">
-				<div class="col-md-12">
-					<img src="<?php echo img_url("pubs/450x125px-camping-le-soleil.jpg");?>">
+			<div class="row ">
+				<div class="col-md-12 lignepub">
+					<a  href=""><img class="img-responsive" src="<?php echo img_url("pubs/450x125px-camping-le-soleil.jpg");?>"></a>
 				</div>
 			</div>
-			<div class="row lignepub">
-				<div class="col-md-12">
-					<img src="<?php echo img_url("pubs/bandeau_cancalaise_450x125px.jpg");?>">
+			<div class="row ">
+				<div class="col-md-12 lignepub">
+					<a  href=""><img  class="img-responsive" src="<?php echo img_url("pubs/bandeau_cancalaise_450x125px.jpg");?>"></a>
 				</div>
 			</div>
 		</div>
@@ -92,4 +166,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-</div>
+

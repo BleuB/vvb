@@ -34,14 +34,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<br>
 						<a href="http://www.bleu-b.com/" target="blank"class="agence">Création <?php echo img('logo_footer_web.jpg','logo_footer_web.jpg');?></a>
 						<br><br>
-						Carte par © <a href="https://cmap.comersis.com/" class="alignnone" style="display: inline; position: absolute; margin: 0 0 0 5px;">Comersis</a>
+						Carte par © <a href="https://cmap.comersis.com/" class="alignnone" >Comersis</a>
 					</p>
 				</div>
 			</div>
 			<div class="col-xs-12 text-center">
 				&copy; Vacances Vertes et Bleues, 2016
 			</div>
-		</footer>
+		
+	</footer>
+
 	<!-- script -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
