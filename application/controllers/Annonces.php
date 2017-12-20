@@ -1,8 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Annonces extends CI_Controller {
 
+	private $isco;
 	private $dataH = array();//data head
 	private $dataHd = array();//data header
 	private $dataC = array();//data corp
@@ -18,16 +19,15 @@ class Home extends CI_Controller {
 	{
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
-		$this->load->model('Pub_model');
-		$this->load->model('Annonce_model');
-		$this->dataC['listpubs'] = $this->Pub_model->get_pub_list(4,'acc');
-		$this->dataC['listTopAnn'] = $this->Annonce_model->get_top_annonces();
+
+		$this->load->model('Rech_annonces_model');
+		$this->dataC['regions']=$this->Rech_annonces_model->get_regions();
 
 
 		//affichage
 		$this->load->view('common/head',$this->dataH);
 		$this->load->view('common/header');
-		$this->load->view('home/accueil',$this->dataC);
+		$this->load->view('Annonces/rech_annonces',$this->dataC);
 		$this->load->view('common/footer');
 	}
 

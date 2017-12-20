@@ -30,6 +30,11 @@ h2
  	color: white;
  }
 
+ .nav li a:hover,  .nav li a:link
+ {
+ 	background-color: transparent;
+ }
+
  .nav .col-md-12
  {
  	padding: 0;
@@ -189,9 +194,32 @@ svg
 #conseils
 {
 	margin-top: 50px;
+	margin-bottom: 40px;
+	padding: 20px;
 	text-align: center;
+	color: #1D8AC9;
 	border-top:solid 2px #1D8AC9;
+	border-bottom:solid 2px #1D8AC9;
 }
+
+
+
+
+#blockvide
+{
+	height: 100px;
+}
+
+#blockvide2
+{
+	height: 160px;
+}
+
+#blockvide3
+{
+	height: 50px;
+}
+
 
 /* footer*/
  
@@ -226,10 +254,7 @@ footer.principal > div:last-child{
 	padding: 20px 0;
 }
 
-#blockvide
-{
-	height: 350px;
-}
+
 
 
 /* MEDIA QUERIES */

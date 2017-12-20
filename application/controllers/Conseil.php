@@ -85,7 +85,7 @@ class Conseil extends CI_Controller {
 		//affichage
 		$this->load->view('common/head',$this->dataH);
 		$this->load->view('common/header');
-		$this->load->view('conseils/reservations');
+		$this->load->view('conseils/demarches');
 		$this->load->view('common/footer');
 	}
 

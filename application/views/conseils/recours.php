@@ -1,10 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<section id="content" class="row">
-	<section id="conseils" itemprop="text">
+
+	<div class="row">
+		<h3 id="conseils" class="col-md-3 col-md-offset-4">Recours</h3>
+	</div>
+	<div class="row">
 		<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-			<h3>Recours</h3>
+			
 			<div class="row">
 				<div class="col-xs-12 col-md-6 text-justify vertical-align-item">
 					<strong>Quels recours en cas de non réponse ?</strong>
@@ -16,13 +19,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<p><i class="fa fa-square" aria-hidden="true"></i> Vous avez réservé une chambre dans un hôtel. Vous pouvez porter votre plainte auprès de l’Union des Métiers et des Industries de l’Hôtellerie (www.umih.fr)</p>
 				</div><!--
 		 --><div class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-0 vertical-align-item">
-					<?php //echo my_img('conseils/pexels-photo-166639.jpeg','','img-responsive center-block'); ?>
+					<img class="img-responsive" src="<?php echo img_url('conseils/pexels-photo-166639.jpeg'); ?>">
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-0 vertical-align-item hidden-xs hidden-sm">
-					<?php //echo my_img('conseils/231h.png','','img-responsive center-block'); ?>
+					<img class="img-responsive" src="<?php echo img_url('conseils/231h.png'); ?>">
 				</div><!--
 		 --><div class="col-xs-12 col-md-6 text-justify vertical-align-item">
 					<strong>A défaut d’accord à l’amiable, et en cas de préjudice important, comment faire reconnaître son droit ?</strong>
@@ -33,5 +36,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 
 		</div>
-	</section>
-</section>
+	</div>
+
