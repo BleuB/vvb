@@ -9,6 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo js_url('admin_js'); ?>"></script>
+<script type="text/javascript" src="<?php echo js_url('lity.min'); ?>"></script>
 <script type="text/javascript">
 	$('.button-actif').click(function(){
 		var toChange;
@@ -26,6 +27,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		$.post( "<?php echo site_url('admin/ajaxUpdateActif'); ?>",{ c:toChange,i:id} );
 		
 	});
+</script>
+<script type="text/javascript">
+	$(document).on('lity:open', function(event, instance) {
+   		alert('essai');
+	});
+
+	$(document).on('lity:close', function(event, instance) {
+	   // on close
+	});
+
+	$(document).on('lity:ready', function(event, instance) {
+	   // on ready
+	});
+
+	$(document).on('lity:remove', function(event, instance) {
+	   // on remove
+	});
+
+	$(document).on('lity:resize', function(event, instance) {
+	   // on resize
+	});
+
 </script>
 </body>
 </html>
