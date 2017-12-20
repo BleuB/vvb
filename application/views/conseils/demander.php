@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 	<div class="row">
-		<h3 id="conseils" class="col-md-3 col-md-offset-4">Vous devez demander</h3>
+		<h3 id="conseils" class="col-md-3 col-md-offset-4">Ce que vous devez demander</h3>
 	</div>
 	<div class="row">
 		<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">

@@ -30,6 +30,11 @@ h2
  	color: white;
  }
 
+ .nav li a:hover,  .nav li a:link
+ {
+ 	background-color: transparent;
+ }
+
  .nav .col-md-12
  {
  	padding: 0;

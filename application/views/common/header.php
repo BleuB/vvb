@@ -6,11 +6,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="col-md-12" style="padding:0;">
 			
 			<ul class="nav">
+				<!--<li>
+					<img src="<?php echo img_url("logos/logo.png")?>">
+				</li>-->
 				<li>
 					<a href="<?php echo site_url("Home");?>"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
 				</li>
 				<li>
-					<a href="#">Annonces</a>
+					<a href="<?php echo site_url("Annonces");?>">Annonces</a>
 				</li>
 
 

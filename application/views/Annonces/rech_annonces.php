@@ -1,0 +1,89 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<div class="row">
+	<h2 class="col-md-4 col-md-offset-4">Trouver une Location</h2>
+</div>
+<div class="row">
+	<form class="col-md-6 col-md-offset-3">
+	<div class="form-group">
+		<label for="inputmotcle">Mot-clés</label>
+		<input type="text" id="inputmotcle" class="form-control" placeholder="bretagne, hôtel, plage, ...">
+	</div>
+
+	<div class="form-group">
+		<label>Régions : </label>
+
+		<select class="form-control">
+			<option value="0" selected="selected">---  Regions  ---</option>
+			<?php  foreach ($regions as $value) {?>
+				<option value="<?php echo $value['id'];?>"><?php echo $value['nom'] ?></option>
+			<?php }?>
+		</select>
+	</div>
+
+	<div class="form-group">
+		<label>Département : </label>
+		<select class="form-control">
+			<option value="0">--- Département --</option>
+		</select>
+	</div>
+	<label>Type de location : </label>
+		<div class="form-group">
+			<div class="row">
+			<div class="col-md-4">
+				<input type="checkbox" value="camping-mobilhome"> Camping - Mobil-home
+			</div>
+			<div class="col-md-4">
+				<input type="checkbox" value="giteLocationIsolite"> Gîte - Location Insolite
+			</div>
+			<div class="col-md-4">
+				<input type="checkbox" value="ChambreHote"> Chambre d'hôte
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<input type="checkbox" value="MaisonVilla"> Maison - Villa
+			</div>
+			<div class="col-md-4">
+				<input type="checkbox" value="MobilhomeChalet"> Mobil-Home - Châlet
+			</div>
+			<div class="col-md-4">
+				<input type="checkbox" value="hotelAuberge"> Hôtel - Auberge
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<input type="checkbox" value="villageVacances"> Village Vacances
+			</div>
+			<div class="col-md-4">
+				<input type="checkbox" value="appartement"> Appartement
+			</div>
+			<div class="col-md-4">
+				<input type="checkbox" value="Châletmontagne"> Châlet à la montagne
+			</div>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label>Options :</label>
+		<div class="row">
+			<div class="col-md-3">
+				<input type="checkbox" value="accesInternet"> Accès Internet
+			</div>
+			<div class="col-md-3">
+				<input type="checkbox" value="accesHandicape"> Accès Handicapé
+			</div>
+			<div class="col-md-3">
+				<input type="checkbox" value="chequevacance"> Chèques Vacances
+			</div>
+			<div class="col-md-3">
+				<input type="checkbox" value="animaux"> Animaux acceptés
+			</div>
+		</div>
+	</div>
+
+	<button class="btn btn-default">Recherche</button>
+	
+</form>
+</div>
