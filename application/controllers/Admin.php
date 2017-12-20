@@ -79,4 +79,8 @@ class Admin extends CI_Controller {
 		}
 		$this->load->view('admin/footer');
 	}
+	public function ajaxUpdateActif(){
+		$this->load->model('Pub_model');
+		$this->Pub_model->updateActif($_POST['i'],$_POST['c']);
+	}
 }

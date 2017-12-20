@@ -9,4 +9,11 @@ class Pub_model extends CI_Model
                     ->result_array();
         return $row;
     }
+    public function updateActif($id,$change){
+    	$data = array(
+                'active'  => $change
+        );
+        $this->db->where('id', $id);
+        $this->db->update('pubs', $data);
+    }
 }
