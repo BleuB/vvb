@@ -83,4 +83,9 @@ class Admin extends CI_Controller {
 		$this->load->model('Pub_model');
 		$this->Pub_model->updateActif($_POST['i'],$_POST['c']);
 	}
+	public function modifPubs(){
+		
+		$this->load->model('Pub_model');
+		$this->load->view('admin/modifPubs');
+	}
 }
