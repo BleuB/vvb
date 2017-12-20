@@ -18,11 +18,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="col-md-4" ><?php echo $value['link'] ; ?></div>
                     <div class="col-md-4" ><img src="<?php echo base_url('assets/images/pubs/').$value['file'] ; ?>" class="img-responsive" ></div>
                     <div class="col-md-4" ><?php if ($value['active'] == 1) { ?>
-                        <button class="btn btn-success button-actif">
+                        <button id="<?php echo $value['id'] ;?>" class="btn btn-success button-actif">
                             <i class="fa fa-check-square-o" aria-hidden="true"></i>
                         </button>
                     <?php } else{ ?>
-                        <button class="btn btn-danger button-actif">
+                        <button id="<?php echo $value['id'] ;?>" class="btn btn-danger button-actif">
                             <i class="fa fa-square-o" aria-hidden="true"></i>
                         </button> 
                     <?php } ?>

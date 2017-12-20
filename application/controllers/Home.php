@@ -18,14 +18,15 @@ class Home extends CI_Controller {
 	{
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
-
+		$this->load->model('Pub_model');
+		$this->dataC['listpubs'] = $this->Pub_model->load_pub_list(4,'acc');
 
 
 
 		//affichage
 		$this->load->view('common/head',$this->dataH);
 		$this->load->view('common/header');
-		$this->load->view('home/accueil');
+		$this->load->view('home/accueil',$this->dataC);
 		$this->load->view('common/footer');
 	}
 

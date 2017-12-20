@@ -11,14 +11,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script type="text/javascript" src="<?php echo js_url('admin_js'); ?>"></script>
 <script type="text/javascript">
 	$('.button-actif').click(function(){
+		var toChange;
+		var id = $(this).attr('id');
 		if ($(this).hasClass('btn-success')) {
 			$(this).children().removeClass('fa-check-square-o').addClass('fa-square-o');
 			$(this).removeClass('btn-success').addClass('btn-danger');
+			toChange = 0;
 		}
 		else{
 			$(this).children().removeClass('fa-square-o').addClass('fa-check-square-o');
 			$(this).removeClass('btn-danger').addClass('btn-success');
+			toChange = 1;
 		}
+		$.post( "<?php echo site_url('admin/ajaxUpdateActif'); ?>",{ c:toChange,i:id} );
+		
 	});
 </script>
 </body>
