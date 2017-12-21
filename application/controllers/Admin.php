@@ -65,6 +65,11 @@ class Admin extends CI_Controller {
 		else{
 			$this->dataHD['logged'] = false;
 		}
+
+		if (isset($_POST['modifier'])) {
+			$this->Pub_model->updateUrl($_POST['id-mod'],$_POST['url-mod']);
+		}
+
 		$this->dataC['pubaccueil'] = $this->Pub_model->get_pub_admin('acc');
 
 

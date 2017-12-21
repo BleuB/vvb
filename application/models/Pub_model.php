@@ -16,6 +16,13 @@ class Pub_model extends CI_Model
         $this->db->where('id', $id);
         $this->db->update('pubs', $data);
     }
+    public function updateUrl($id,$url){
+        $data = array(
+                'link'  => $url
+        );
+        $this->db->where('id', $id);
+        $this->db->update('pubs', $data);
+    }
     public function get_pub_list($limit,$emplacement){
         $row = $this->db->select()
                     ->from('pubs')

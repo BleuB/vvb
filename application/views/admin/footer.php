@@ -8,8 +8,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!-- script -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<?php echo js_url('admin_js'); ?>"></script>
 <script type="text/javascript" src="<?php echo js_url('lity.min'); ?>"></script>
+<script type="text/javascript" src="<?php echo js_url('admin_js'); ?>"></script>
 <script type="text/javascript">
 	$('.button-actif').click(function(){
 		var toChange;
@@ -28,27 +28,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		
 	});
 </script>
+<?php if ($thispage == "pub") { ?>
 <script type="text/javascript">
 	$(document).on('lity:open', function(event, instance) {
-   		alert('essai');
+   		// alert('essai');
+   		var ur = instance.opener().attr('data-url');
+   		var id = instance.opener().attr('data-id');
+   		$('form',this).children('#url-mod').attr('value',ur);
+   		$('form',this).children('#id-mod').attr('value',id);
 	});
+</script>	
+<?php } ?>
 
-	$(document).on('lity:close', function(event, instance) {
-	   // on close
-	});
-
-	$(document).on('lity:ready', function(event, instance) {
-	   // on ready
-	});
-
-	$(document).on('lity:remove', function(event, instance) {
-	   // on remove
-	});
-
-	$(document).on('lity:resize', function(event, instance) {
-	   // on resize
-	});
-
-</script>
 </body>
 </html>

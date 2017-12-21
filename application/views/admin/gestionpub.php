@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <h3>Publicités accueil</h3>
                 <?php foreach ($pubaccueil as $key => $value) { ?>
                 <div class="col-md-12 listpub" >
-                    <div class="col-md-4" ><a href="#litbox" data-lity><?php echo $value['link'] ; ?></a></div>
+                    <div class="col-md-4" ><a href="#litbox" data-lity data-id="<?php echo $value['id'] ; ?>" data-url="<?php echo $value['link'] ; ?>"><?php echo $value['link'] ; ?></a></div>
                     <div class="col-md-4" ><img src="<?php echo base_url('assets/images/pubs/').$value['file'] ; ?>" class="img-responsive" ></div>
                     <div class="col-md-4" ><?php if ($value['active'] == 1) { ?>
                         <button id="<?php echo $value['id'] ;?>" class="btn btn-success button-actif">
@@ -57,14 +57,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 <!-- lity box -->
-<div id="litbox" class="jumbotron  lity-hide " style="max-width: 80%;margin: auto;" >
-    <h3>test</h3>
-    <p>
-
-Hac ex causa conlaticia stipe Valerius humatur ille Publicola et subsidiis amicorum mariti inops cum liberis uxor alitur Reguli et dotatur ex aerario filia Scipionis, cum nobilitas florem adultae virginis diuturnum absentia pauperis erubesceret patris.
-
-Soleo saepe ante oculos ponere, idque libenter crebris usurpare sermonibus, omnis nostrorum imperatorum, omnis exterarum gentium potentissimorumque populorum, omnis clarissimorum regum res gestas, cum tuis nec contentionum magnitudine nec numero proeliorum nec varietate regionum nec celeritate conficiendi nec dissimilitudine bellorum posse conferri; nec vero disiunctissimas terras citius passibus cuiusquam potuisse peragrari, quam tuis non dicam cursibus, sed victoriis lustratae sunt.
-
-Quam ob rem ut ii qui superiores sunt submittere se debent in amicitia, sic quodam modo inferiores extollere. Sunt enim quidam qui molestas amicitias faciunt, cum ipsi se contemni putant; quod non fere contingit nisi iis qui etiam contemnendos se arbitrantur; qui hac opinione non modo verbis sed etiam opere levandi sunt.
-</p>
+<div id="litbox" class="jumbotron  lity-hide " style="max-width: 80%;margin: auto;min-width: 400px;
+text-align: center;" >
+    <h3>Modifications</h3>
+    <form method="post" action="<?php echo site_url('admin/pub'); ?>" >
+        <input type="hidden" id="id-mod" name="id-mod">
+        <label for="url-mod" >URL</label><br>
+        <input type="text" name="url-mod" id="url-mod" value="test" style="width: 90%;" ><br>
+        <input type="submit" name="modifier" value="modifier">
+    </form>
+    <form method="post" action="<?php echo site_url('admin/pub'); ?>" >
+        <label for="im-mod" >Image</label><br>
+        <input type="file" name="im-mod"><br>
+        <input type="submit" name="mod-img" value="valider">
+    </form>
 </div>
