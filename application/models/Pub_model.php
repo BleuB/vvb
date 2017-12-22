@@ -34,4 +34,25 @@ class Pub_model extends CI_Model
                     ->result_array();
         return $row;
     }
+    public function modif_image($post,$files){
+        $filename=$files['im-mod']['name'];
+        //enregistre images
+        //load library
+        $this->load->library('upload');
+        // config upload
+        $chemin = './assets/images/pubs';
+        $config['upload_path'] = $chemin;
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['max_size']    = '0';
+        $this->upload->initialize($config);
+        $this->upload->do_upload('im-mod');
+        $test = $this->upload->display_errors();
+        
+        $data = array(
+                'image'  => $this->upload->data('file_name')
+        );
+        $this->db->where('id', $post['id']);
+        $this->db->update('pubs', $data);
+        return $test;
+    }
 }
