@@ -55,4 +55,13 @@ class Pub_model extends CI_Model
         $this->db->update('pubs', $data);
         return $test;
     }
+    public function new_pub($post){
+        $data = array(
+            'link' => $post['url-new'],
+            'emplacement' => $post['emplacement'],
+            'active' => 0
+        );
+
+        $this->db->insert('pubs', $data);
+    }
 }

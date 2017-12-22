@@ -33,11 +33,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	$(document).on('lity:open', function(event, instance) {
    		var ur = instance.opener().attr('data-url');
    		var id = instance.opener().attr('data-id');
-   		var cat = instance.opener().attr('data-cat');
    		$('form',this).children('#url-mod').attr('value',ur);
    		$('form',this).children('#id-mod').attr('value',id);
-   		$('form',this).children('#cat-mod').attr('value',cat);
-   		$('form',this).children('#catf-mod').attr('value',cat);
    		$('form',this).children('#idf-mod').attr('value',id);
 	});
 </script>	
