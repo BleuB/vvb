@@ -49,9 +49,9 @@ class Pub_model extends CI_Model
         $test = $this->upload->display_errors();
         
         $data = array(
-                'image'  => $this->upload->data('file_name')
+                'file'  => $this->upload->data('file_name')
         );
-        $this->db->where('id', $post['id']);
+        $this->db->where('id', $post['idf-mod']);
         $this->db->update('pubs', $data);
         return $test;
     }

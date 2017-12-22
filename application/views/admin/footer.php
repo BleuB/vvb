@@ -38,6 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
    		$('form',this).children('#id-mod').attr('value',id);
    		$('form',this).children('#cat-mod').attr('value',cat);
    		$('form',this).children('#catf-mod').attr('value',cat);
+   		$('form',this).children('#idf-mod').attr('value',id);
 	});
 </script>	
 <?php } ?>

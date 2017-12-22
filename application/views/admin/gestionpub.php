@@ -68,8 +68,9 @@ text-align: center;" >
         <input type="text" name="url-mod" id="url-mod" value="test" style="width: 90%;" ><br>
         <input type="submit" name="modifier" value="modifier">
     </form>
-    <form method="post" action="<?php echo site_url('admin/pub'); ?>" >
+    <form method="post" enctype="multipart/form-data" action="<?php echo site_url('admin/pub'); ?>" >
         <input type="hidden" id="catf-mod" name="catf-mod">
+        <input type="hidden" id="idf-mod" name="idf-mod">
         <label for="im-mod" >Image</label><br>
         <input type="file" name="im-mod"><br>
         <input type="submit" name="mod-img" value="valider">
