@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</li>
 
 				<li>
-					<a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> Mon Espace</a>
+					<a href="<?php echo site_url("login"); ?>"><i class="fa fa-user-o" aria-hidden="true"></i> Mon Espace</a>
 				</li>
 				<li id="passe_ann"><a href="">Passer une annonce</a></li>
 				
