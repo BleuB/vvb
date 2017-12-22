@@ -69,6 +69,12 @@ class Admin extends CI_Controller {
 		if (isset($_POST['modifier'])) {
 			$this->Pub_model->updateUrl($_POST['id-mod'],$_POST['url-mod']);
 		}
+		if (isset($_POST['mod-img'])) {
+			$this->Pub_model->modif_image($_POST,$_FILES);
+		}
+		if (isset($_POST['new-pub'])) {
+			$this->Pub_model->new_pub($_POST);
+		}
 
 		$this->dataC['pubaccueil'] = $this->Pub_model->get_pub_admin('acc');
 
