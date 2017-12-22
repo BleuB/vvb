@@ -6,6 +6,7 @@ h3
 h2
 {
 	text-align: center;
+
 }
 
 /* bar de navigation */
@@ -188,6 +189,19 @@ svg
 	color: white;
 	font-size: 1.3em;
 }
+/*------------------------------------Recherche annonce----------------------------*/
+
+#title
+{
+	text-align: left; 
+	border-bottom: solid 1px #1D8AC9;
+
+	margin-top:1%;
+	margin-bottom: 2%;
+
+	color: #1D8AC9
+}
+
 
 /*-----------------------------Conseil------------------------------*/
 
