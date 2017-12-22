@@ -11,4 +11,16 @@ class Rech_annonces_model extends CI_Model
 
 		return $res;
 	}
+
+	public function get_dep_by_region($reg)
+	{
+		$res=$this->select
+					->from('dpartement')
+					->where('id_region',$reg)
+					->get()
+					->result_array();
+		return $res;
+	}
+
+	
 }
