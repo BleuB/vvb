@@ -22,9 +22,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</li>
 
 				<li>
-					<a href="<?php echo site_url("login"); ?>"><i class="fa fa-user-o" aria-hidden="true"></i> Mon Espace</a>
+					<a href="<?php echo site_url("login"); ?>">
+						<?php if($logged){?>
+							<i class="fa fa-user" aria-hidden="true"></i>
+						<?php }else{?>
+							<i class="fa fa-user-o" aria-hidden="true"></i>
+						<?php }?> Mon Espace
+					</a>
 				</li>
-				<li id="passe_ann"><a href="">Passer une annonce</a></li>
+				<?php if($logged){?>
+					<li>Crédits : 0</li>
+					<li><a href="<?php echo site_url('Home?deco'); ?>">Déconnexion</a></li>
+
+				<?php }?>
+
+				<?php 
+					$pass;
+					if($logged){
+						$pass=site_url("Home");
+					}else{
+						$pass=site_url("login");
+					}
+				?>
+				<li id="passe_ann"><a href="<?php echo $pass; ?>">Passer une annonce</a></li>
+
 				
 			</ul>
 		</div>

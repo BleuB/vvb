@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 	<div class="row">
-		<h3 id="conseils" class="col-md-3 col-md-offset-4">Nos Conseils</h3>
+		<h2 id="conseils" class="col-md-3 col-md-offset-4">Nos Conseils</h2>
 	</div>
 	
 <div class="row">

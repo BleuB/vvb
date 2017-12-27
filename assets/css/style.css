@@ -23,6 +23,7 @@ h2
  {
  	display: inline-block;
  	margin-left: 2%;
+ 	color: white;
  	
  }
 
@@ -199,10 +200,78 @@ svg
 	margin-top:2%;
 	margin-bottom: 2%;
 
-	color: #1D8AC9
+	color: #1D8AC9;
+}
+
+/*-----------------------------------Connexion--------------------------------*/
+
+.big-title
+{
+	border-bottom: solid 2px #1D8AC9;
+	border-top: solid 2px #1D8AC9;
+	padding: 20px;
+	color: #1D8AC9;
+
+	margin-bottom: 40px;
+	margin-top: 30px;
+}
+
+#inscription
+{
+	border-right: solid 3px #ADCE4A;
 }
 
 
+
+.title_login
+{
+	border-bottom: solid 1px #1D8AC9;
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+
+	color: #1D8AC9;
+}
+
+.btn-log
+{
+	background-color: #ADCE4A;
+	color: white;
+	margin-left: 30%;
+	margin-top: 20px;
+	width: 40%;
+	font-size: 1.3em;
+
+}
+
+.btn-log:hover
+{
+	background-color: #80aa29;
+	color: white;
+}
+
+#ligne_pub
+{
+	margin: 50px;
+}
+
+#ligne_pub div
+{
+	padding-left: 50px;
+}
+
+/*---------------------------------------espace---------------------------------------------*/
+
+#titre_listannonce
+{
+	color: #1D8AC9;
+	margin-top: 0;
+}
+
+#add_annonce button
+{
+	background-color: #1D8AC9;
+	color: white;
+}
 
 
 /*-----------------------------Conseil------------------------------*/
