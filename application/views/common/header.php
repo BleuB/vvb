@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</a>
 				</li>
 				<?php if($logged){?>
-					<li>Crédits : 0</li>
+					<li><a href="<?php echo site_url("login/remonteAnnonce");?>">Crédits : 0</a></li>
 					<li><a href="<?php echo site_url('Home?deco'); ?>">Déconnexion</a></li>
 
 				<?php }?>

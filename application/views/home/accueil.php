@@ -106,7 +106,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="row">
 		<div class="col-md-8">
 			<h2 id="titre_ann">Top annonces</h2>
-
+			
 			<?php foreach($listTopAnn as $ann){?>
 		
 			<div class="row annonce">

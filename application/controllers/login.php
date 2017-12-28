@@ -70,4 +70,23 @@ class Login extends CI_Controller {
 		$this->load->view('common/footer');
 	
 	}
+
+	public function ModifAnnonce()
+	{
+		$this->dataH['title'] = "Vacances vertes et bleues";
+		$this->dataH['description'] = "vacances vertes et bleues";
+		if ($this->isco) {
+			$this->dataHD['logged'] = true;
+		}
+		else{
+			$this->dataHD['logged'] = false;
+		}
+
+		//affichage
+		$this->load->view('common/head',$this->dataH);
+		$this->load->view('common/header',$this->dataHD);
+		$this->load->view('espace/modifannonce',$this->dataC);
+		$this->load->view('common/footer');
+	
+	}
 }

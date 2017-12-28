@@ -30,8 +30,11 @@ class Annonce_model extends CI_Model
         	
         	$result[$i] = $$key = $value;
        		$result[$i]['region'] = $this->region($result[$i]['region']);
+            $i++;
 		}
 		return $result;
+
+        
     }
 
     //recup region

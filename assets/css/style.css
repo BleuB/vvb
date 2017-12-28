@@ -1,6 +1,7 @@
 h3
 {
 	margin-bottom: 20px;
+
 }
 
 h2
@@ -273,7 +274,48 @@ svg
 	color: white;
 }
 
+/*----------------------------------------remonter annonce----------------------------------------*/
 
+.expliqcredit h3
+{
+	text-align: center;
+	margin-top: 70px;
+}
+
+.expliqcredit
+{
+	margin-right: 50px;
+	margin-bottom: 25px;
+}
+
+.btn-achat
+{
+		background-color: #1D8AC9;
+	color: white;
+}
+
+table
+{
+	text-align: center;
+}
+
+th
+{
+	text-align: center;
+	font-size: 1.2em;
+}
+/*----------------------------Modif annonce-----------------------------------------------------------------*/
+
+.panel-default > .panel-heading
+{
+	background-color: #1D8AC9;
+	color:white;
+}
+
+label h4
+{
+	margin-top: 0;
+}
 /*-----------------------------Conseil------------------------------*/
 
 #conseils
