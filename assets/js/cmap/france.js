@@ -26,54 +26,54 @@ Modifiez ci-dessous les 2 variables pour chaque région :
 var paths = {
 alsace: {
 title: "Grand Est",
-url: "recherche?region=6"
+url: "annonces?region=6"
 },
 aquitaine: {
 title: "Nouvelle Aquitaine",
-url: "recherche?region=10"
+url: "annonces?region=10"
 },
 auvergne: {
 title: "Auvergne-Rhône-Alpes",
-url: "recherche?region=1"
+url: "annonces?region=1"
 },
 bourgogne: {
 title: "Bourgogne-Franche-Comté",
-url: "recherche?region=2"
+url: "annonces?region=2"
 },
 bretagne: {
 title: "Bretagne",
-url: "recherche?region=3"
+url: "annonces?region=3"
 },
 centre: {
 title: "Centre",
-url: "recherche?region=4"
+url: "annonces?region=4"
 },
 corse: {
 title: "Corse",
-url: "recherche?region=5"
+url: "annonces?region=5"
 },
 languedoc: {
 title: "Occitanie",
-url: "recherche?region=11"
+url: "annonces?region=11"
 },
 ile: {
 title: "Ile-de-France",
-url: "recherche?region=8"
+url: "annonces?region=8"
 },
 nord: {
 title: "Hauts de France",
-url: "recherche?region=7"
+url: "annonces?region=7"
 },
 normandie: {
 title: "Normandie",
-url: "recherche?region=9"
+url: "annonces?region=9"
 },
 loire: {
 title: "Pays-de-la-Loire",
-url: "recherche?region=12"
+url: "annonces?region=12"
 },
 provence: {
 title: "Provence-Alpes-Côte-d-Azur",
-url: "recherche?region=13"
+url: "annonces?region=13"
 }
 }

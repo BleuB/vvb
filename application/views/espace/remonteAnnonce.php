@@ -35,7 +35,7 @@
 						<td><a href=""><button class="btn btn-default btn-achat">Acheter</button></a></td>
 					</tr>
 					<tr>
-						<td>10 crédits</td>
+						<td>112 crédits</td>
 						<td>140€</td>
 						<td>1.25€</td>
 						<td><a href=""><button class="btn btn-default btn-achat">Acheter</button></a></td>
