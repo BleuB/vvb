@@ -49,27 +49,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 				<div class="col-md-4 col-lg-offset-1 col-md-offset-2">
 					<ul class="list-unstyled">
-						<li><a href="<?php echo site_url('recherche');?>?region=6&alsace" class="alsace">Grand Est</a></li>
-						<li><a href="<?php echo site_url('recherche');?>?region=10&aquitaine"  class="aquitaine">Nouvelle Aquitaine</a></li>
-						<li><a href="<?php echo site_url('recherche');?>?region=1&auvergne" class="auvergne">Auvergne-Rhône-Alpes</a></li>
-						<li><a href="<?php echo site_url('recherche');?>?region=2&bourgogne" class="bourgogne">Bourgogne-Franche-Comté</a></li>
-						<li><a href="<?php echo site_url('recherche');?>?region=3&bretagne" class="bretagne">Bretagne</a></li>
-						<li><a href="<?php echo site_url('recherche');?>?region=4&centre" class="centre">Centre-Val de Loire</a></li>
-						<li><a href="<?php echo site_url('recherche');?>?region=5&corse" class="corse">Corse</a></li>
-						<li><a href="<?php echo site_url('recherche');?>?region=8&ile-de-france" class="ile">Île-de-France </a></li>
-						<li><a href="<?php echo site_url('recherche');?>?region=11&languedoc" class="languedoc">Occitanie</a></li>
-						<li><a href="<?php echo site_url('recherche');?>?region=7&hauts-de-france" class="nord">Hauts de France</a></li>
-						<li><a href="<?php echo site_url('recherche');?>?region=9&normandie" class="normandie">Normandie</a></li>
-						<li><a href="<?php echo site_url('recherche');?>?region=12&pays-de-loire" class="loire">Pays de la Loire</a></li>
-						<li><a href="<?php echo site_url('recherche');?>?region=13&provence" class="provence">Provence-Alpes-Côte d'Azur</a></li>
+						<li><a href="<?php echo site_url('annonces');?>?region=6&alsace" class="alsace">Grand Est</a></li>
+						<li><a href="<?php echo site_url('annonces');?>?region=10&aquitaine"  class="aquitaine">Nouvelle Aquitaine</a></li>
+						<li><a href="<?php echo site_url('annonces');?>?region=1&auvergne" class="auvergne">Auvergne-Rhône-Alpes</a></li>
+						<li><a href="<?php echo site_url('annonces');?>?region=2&bourgogne" class="bourgogne">Bourgogne-Franche-Comté</a></li>
+						<li><a href="<?php echo site_url('annonces');?>?region=3&bretagne" class="bretagne">Bretagne</a></li>
+						<li><a href="<?php echo site_url('annonces');?>?region=4&centre" class="centre">Centre-Val de Loire</a></li>
+						<li><a href="<?php echo site_url('annonces');?>?region=5&corse" class="corse">Corse</a></li>
+						<li><a href="<?php echo site_url('annonces');?>?region=8&ile-de-france" class="ile">Île-de-France </a></li>
+						<li><a href="<?php echo site_url('annonces');?>?region=11&languedoc" class="languedoc">Occitanie</a></li>
+						<li><a href="<?php echo site_url('annonces');?>?region=7&hauts-de-france" class="nord">Hauts de France</a></li>
+						<li><a href="<?php echo site_url('annonces');?>?region=9&normandie" class="normandie">Normandie</a></li>
+						<li><a href="<?php echo site_url('annonces');?>?region=12&pays-de-loire" class="loire">Pays de la Loire</a></li>
+						<li><a href="<?php echo site_url('annonces');?>?region=13&provence" class="provence">Provence-Alpes-Côte d'Azur</a></li>
 						
 						<br>
 										         
-					 	<li><a href="<?php echo site_url('recherche');?>?region=14&dom-tom" class="domtom">Dom-Tom</a></li>
+					 	<li><a href="<?php echo site_url('annonces');?>?region=14&dom-tom" class="domtom">Dom-Tom</a></li>
 										         
 						<br>
 						
-						<li><a href="<?php echo site_url('recherche');?>?locations-vacances" class="domtom">Voir toutes</a></li>
+						<li><a href="<?php echo site_url('annonces');?>?locations-vacances" class="domtom">Voir toutes</a></li>
 					
 					</ul>
 				</div>
