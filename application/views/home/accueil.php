@@ -108,10 +108,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<h2 id="titre_ann">Top annonces</h2>
 			
 			<?php foreach($listTopAnn as $ann){?>
-		
+			<?php// var_dump($ann);?>
 			<div class="row annonce">
 				<div class="col-md-3 col-xs-5">
-					<img src="<?php echo img_url("3.png")?>" class="thumbnail img-responsive" />
+					<img src="<?php echo img_url("annonces/".$ann['couv'])?>" class="thumbnail img-responsive" />
 				</div>
 				<div class="col-md-6 col-xs-12">
 					<a class="lien_ann" href=""><h3><?php echo $ann['title'];?></h3></a>
@@ -119,10 +119,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<p><?php echo $ann['descr_courte']?></p>
 				</div>
 				<div class="col-md-2 col-md-offset-1">
-					<div class="note"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+					<div class="note">
+						<?php 
+							if($ann['stars']>0){
+								for($i=0;$i<$ann["stars"];$i++)
+								{
+
+									?>
+									<i class="fa fa-star" aria-hidden="true"></i>
+									<?php
+								}
+							}
+						?>
+						</i>
+					</div>
 					<p>A partir de: </p>
 					<p>10€</p>
-					<p>La nuit</p>
+					
 					<a href=""><button type="submit" class="btn btn-default btn-dec" >Découvrir</button></a>
 				</div>
 			</div>

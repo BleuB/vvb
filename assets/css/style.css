@@ -274,6 +274,32 @@ svg
 	color: white;
 }
 
+.nav-tabs a{
+	text-transform: uppercase;
+	font-weight: bold;
+	color: darkgrey;
+	background-color: #eee;
+}
+
+.titreTab a
+{
+	font-size: 1.8em;
+}
+
+.btn-vvb
+{
+	background-color: #ADCE4A;
+}
+
+#onglet
+{
+	border-radius: 5px;
+}
+
+hr
+{
+	border: 2px solid #ADCE4A;
+}
 /*----------------------------------------remonter annonce----------------------------------------*/
 
 .expliqcredit h3
