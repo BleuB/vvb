@@ -51,13 +51,18 @@ class Conseil extends CI_Controller {
 	{
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
-
+		if ($this->isco) {
+			$this->dataHD['logged'] = true;
+		}
+		else{
+			$this->dataHD['logged'] = false;
+		}
 
 
 
 		//affichage
 		$this->load->view('common/head',$this->dataH);
-		$this->load->view('common/header');
+		$this->load->view('common/header',$this->dataHD);
 		$this->load->view('conseils/precautions');
 		$this->load->view('common/footer');
 	}
@@ -66,13 +71,18 @@ class Conseil extends CI_Controller {
 	{
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
-
+		if ($this->isco) {
+			$this->dataHD['logged'] = true;
+		}
+		else{
+			$this->dataHD['logged'] = false;
+		}
 
 
 
 		//affichage
 		$this->load->view('common/head',$this->dataH);
-		$this->load->view('common/header');
+		$this->load->view('common/header',$this->dataHD);
 		$this->load->view('conseils/demander');
 		$this->load->view('common/footer');
 	}
@@ -81,13 +91,18 @@ class Conseil extends CI_Controller {
 	{
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
-
+		if ($this->isco) {
+			$this->dataHD['logged'] = true;
+		}
+		else{
+			$this->dataHD['logged'] = false;
+		}
 
 
 
 		//affichage
 		$this->load->view('common/head',$this->dataH);
-		$this->load->view('common/header');
+		$this->load->view('common/header',$this->dataHD);
 		$this->load->view('conseils/reservations');
 		$this->load->view('common/footer');
 	}
@@ -96,13 +111,18 @@ class Conseil extends CI_Controller {
 	{
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
-
+		if ($this->isco) {
+			$this->dataHD['logged'] = true;
+		}
+		else{
+			$this->dataHD['logged'] = false;
+		}
 
 
 
 		//affichage
 		$this->load->view('common/head',$this->dataH);
-		$this->load->view('common/header');
+		$this->load->view('common/header',$this->dataHD);
 		$this->load->view('conseils/demarches');
 		$this->load->view('common/footer');
 	}
@@ -111,13 +131,18 @@ class Conseil extends CI_Controller {
 	{
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
-
+		if ($this->isco) {
+			$this->dataHD['logged'] = true;
+		}
+		else{
+			$this->dataHD['logged'] = false;
+		}
 
 
 
 		//affichage
 		$this->load->view('common/head',$this->dataH);
-		$this->load->view('common/header');
+		$this->load->view('common/header',$this->dataHD);
 		$this->load->view('conseils/recours');
 		$this->load->view('common/footer');
 	}

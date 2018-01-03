@@ -23,7 +23,7 @@ h2
  .nav li
  {
  	display: inline-block;
- 	margin-left: 2%;
+ 	margin-left: 3%;
  	color: white;
  	
  }
@@ -31,6 +31,8 @@ h2
  .nav li a
  {
  	color: white;
+ 	font-size: 1.3em ;
+
  }
 
  .nav li a:hover,  .nav li a:link
@@ -43,6 +45,15 @@ h2
  	padding: 0;
  }
 
+ .mid-title
+ {
+ 	border-bottom: solid 1px #1D8AC9; 
+ 	color: #1D8AC9;
+ }
+ #firstlink
+ {
+ 	margin-left: 10%;
+ }
  #passe_ann
  {
  	background-color: #E68D06;
@@ -191,6 +202,17 @@ svg
 	color: white;
 	font-size: 1.3em;
 }
+
+.btn-dec:hover
+{
+	background-color: #ADCE4A;
+	color: black;
+}
+.prixtopann
+{
+	font-size: 1.4em;
+	text-transform: uppercase;
+}
 /*------------------------------------Recherche annonce----------------------------*/
 
 #title
@@ -202,6 +224,27 @@ svg
 	margin-bottom: 2%;
 
 	color: #1D8AC9;
+}
+
+/*------------------------------pagination-------------------------------------*/
+
+.pagi_rech
+{
+	font-size: 1.3em;
+	margin-bottom: 25px;
+	padding: 0;
+
+}
+
+.pagi_rech a
+{
+	padding: 8px;
+	text-decoration: none;
+}
+
+.pagi_rech strong
+{
+	padding: 8px;
 }
 
 /*-----------------------------------Connexion--------------------------------*/

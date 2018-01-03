@@ -80,25 +80,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="row"> 
 		<div class="col-md-4 paragraphe">
 			<h2><i class="fa fa-handshake-o" aria-hidden="true"></i> L'Expérience VVB</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu elit sapien. 
-			Vestibulum pretium, mi vitae luctus lobortis, felis nibh eleifend erat, vel eleifend justo sapien quis dui. Ut sit amet elit vitae nulla sagittis congue.
-			 Aenean lacus magna, facilisis in elementum quis, vehicula vel arcu. Donec blandit tempor enim nec dictum. Aenean non felis in felis dignissim viverra.
-			 . </p>
+			<p>Mer, Montagne, Campagne, depuis près de 30 ans, nous vous<br/>
+			proposons des hébergements de tous types et pour tous les budgets : maisons, villas, meublés saisonnier,
+			 gîtes, chambres d’hôtes, camping, Mobil-home, chalets, hôtel - restaurant, village vacances, séjours à la ferme, vacances insolites... 
+			 sur notre site et surtout dans notre guide papier.
+
+			Dans la rubrique : « Avant de Louer : Nos conseils » : vous trouverez pleins d’astuces qui vous guideront vers les bonnes démarches à adopter,
+			 le premier conseil étant de bien s’organiser pour réserver ses vacances !</p>
 		</div>
-		<div id="para_centre" class="col-md-4 paragraphe">
+		<!--<div  class="col-md-4 paragraphe">
 			<h2><i class="fa fa-thumbs-up" aria-hidden="true"></i> Authenticité</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu elit sapien. 
 			Vestibulum pretium, mi vitae luctus lobortis, felis nibh eleifend erat, vel eleifend justo sapien quis dui.
 			 Ut sit amet elit vitae nulla sagittis congue. Aenean lacus magna, facilisis in elementum quis, vehicula vel arcu.
 			  Donec blandit tempor enim nec dictum. Aenean non felis in felis dignissim viverra. Donec vitae lorem sit amet ante tincidunt interdum vel sed enim. 
 			  </p>
-		</div>
-		<div class="col-md-4 paragraphe">
+		</div>-->
+		<div id="para_centre" class="col-md-4 paragraphe">
 			<h2><i class="fa fa-book" aria-hidden="true"></i> Guide VVB</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-			 Praesent eu elit sapien. Vestibulum pretium, mi vitae luctus lobortis, felis nibh eleifend erat, vel eleifend justo sapien quis dui. 
-			 Ut sit amet elit vitae nulla sagittis congue. Aenean lacus magna, facilisis in elementum quis, vehicula vel arcu. Donec blandit tempor enim nec dictum.
-			  Aenean non felis in felis dignissim viverra. Donec vitae lorem sit amet ante tincidunt interdum vel sed enim. Fusce tristique sapien non diam viverra ullamcorper. 
+			<p>Des milliers d’annonceurs nous font confiance !
+				Pour paraître dans nos prochaines éditions, inscrivez-vous sur le nouveau site VVB ou téléchargez le formulaire.
+
+				Multipliez vos chances de location avec nos 2 supports : le site gratuit + le guide papier tiré à 28000 ex
+				(3 éditions, printemps, été et préparation de la saison hivernale. Il est distribué dans 2390 points de vente dans les kiosques,
+				 Maisons de Presse et Grandes et Moyennes surfaces en France et dans 7 pays de la CEE + les Iles Anglo-normandes + le Canada. 
+				 PRÉPAREZ DÈS MAINTENANT VOTRE SAISON 2018 ET RÉSERVEZ VOTRE ANNONCE  dans le guide dès maintenant.
 			  </p>
 		</div>
 	</div>
@@ -111,12 +117,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<?php// var_dump($ann);?>
 			<div class="row annonce">
 				<div class="col-md-3 col-xs-5">
-					<img src="<?php echo img_url("annonces/".$ann['couv'])?>" class="thumbnail img-responsive" />
+					<img src="<?php echo $ann['photocouv'];?>" class="thumbnail img-responsive" />
 				</div>
 				<div class="col-md-6 col-xs-12">
 					<a class="lien_ann" href=""><h3><?php echo $ann['title'];?></h3></a>
-					<h4><?php echo $ann['region']?></h4>
-					<p><?php echo $ann['descr_courte']?></p>
+					<h4><?php echo $ann['departement']; echo " (".$ann['region'].")";?></h4>
+					<p><?php echo $ann['descr_courte'];?></p>
 				</div>
 				<div class="col-md-2 col-md-offset-1">
 					<div class="note">
@@ -134,7 +140,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</i>
 					</div>
 					<p>A partir de: </p>
-					<p>10€</p>
+					<p class="prixtopann"><strong><?php echo $ann['prixbas']['prix'];?>€</strong></p>
+					<p><?php echo $ann['prixbas']['periode'];?></p>
+					<p></p>
 					
 					<a href=""><button type="submit" class="btn btn-default btn-dec" >Découvrir</button></a>
 				</div>
