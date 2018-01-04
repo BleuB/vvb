@@ -27,7 +27,7 @@ class Admin_model extends CI_Model
     }
     //recup list clients
     public function list_clients($offset,$limit){
-        $row = $this->db->select()
+        $row = $this->db->select('id,lastname,firstname,email')
                     ->from('user')
                     ->limit($limit,$offset)
                     ->order_by('lastname')
@@ -40,5 +40,14 @@ class Admin_model extends CI_Model
         $this->db->from('user');
         $result = $this->db->count_all_results();
         return $result;
+    }
+    //recup detail clients
+    public function detail_client($id){
+        $row = $this->db->select()
+                    ->from('user')
+                    ->where('id', $id)
+                    ->get()
+                    ->result_array();
+        return $row;
     }
 }

@@ -199,3 +199,13 @@ footer {
 {
     padding: 8px;
 }
+/*------------------------------list clients-------------------------------------*/
+.listClientsItem{
+    border: 1px solid black;
+    width: 90%;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+

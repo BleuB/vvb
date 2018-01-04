@@ -17,10 +17,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           	<?php
             foreach ($listClients as $key => $value) { ?>
-               <div class="col-md-12" >
+               <div class="col-md-12 listClientsItem" >
                  <div class="col-md-4" ><?php echo $value['lastname'].' '.$value['firstname'] ;?></div>
                  <div class="col-md-4" ><?php echo $value['email'] ;?></div>
-                 <div class="col-md-4" ><?php echo $value['id'] ;?></div>
+                 <div class="col-md-4"><a href="#litbox" data-lity data-id="<?php echo $value['id'] ; ?>"><button class="btn btn-primary">+++</button></a></div>
                </div>
             <?php }?>
           
@@ -30,4 +30,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       	</div>
 	</div>
  <!-- /. PAGE INNER  -->
+</div>
+
+<!-- lity box -->
+<div id="litbox" class="jumbotron  lity-hide " style="max-width: 80%;margin: auto;min-width: 800px;
+text-align: center;" >
+    <h3>Détails client</h3>
+    
 </div>

@@ -176,10 +176,9 @@ class Admin extends CI_Controller {
 		$this->load->model('Pub_model');
 		$this->Pub_model->updateActif($_POST['i'],$_POST['c']);
 	}
-	//fenetres pop up
-	public function modifPubs(){
-		
-		$this->load->model('Pub_model');
-		$this->load->view('admin/modifPubs');
+	public function ajaxClientsDetail(){
+		$detail = $this->admin_model->detail_client($_POST['i']);
+		return json_encode($detail);
 	}
+
 }
