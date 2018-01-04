@@ -25,4 +25,20 @@ class Admin_model extends CI_Model
     public function deco(){
         $this->session->unset_userdata('adminco');
     }
+    //recup list clients
+    public function list_clients($offset,$limit){
+        $row = $this->db->select()
+                    ->from('user')
+                    ->limit($limit,$offset)
+                    ->order_by('lastname')
+                    ->get()
+                    ->result_array();
+        return $row;
+    }
+    //total clients
+    public function total_clients(){
+        $this->db->from('user');
+        $result = $this->db->count_all_results();
+        return $result;
+    }
 }

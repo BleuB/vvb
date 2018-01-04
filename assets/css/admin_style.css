@@ -179,4 +179,23 @@ footer {
     margin-bottom: 5px;
     padding: 5px;
 }
+/*------------------------------pagination-------------------------------------*/
 
+.pag_page
+{
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    padding: 0;
+
+}
+
+.pag_page a
+{
+    padding: 8px;
+    text-decoration: none;
+}
+
+.pag_page strong
+{
+    padding: 8px;
+}
