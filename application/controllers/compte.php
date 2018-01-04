@@ -133,21 +133,21 @@ class Compte extends CI_Controller {
 		//affichage
 		$this->load->view('common/head',$this->dataH);
 		$this->load->view('common/header',$this->dataHD);
-		if (!isset($_POST["option1"])) {
+		if (!isset($_POST["choixTypeLoc"])) {
 			$this->load->view("home/accueil");
 		}
-		elseif($_POST["option1"] == 'cm')
+		elseif($_POST["choixTypeLoc"] == 'cm')
 		{
 			$this->load->view('espace/camp_form',$this->dataC);
 		}
-		elseif ($_POST["option1"] == 'loc') 
+		elseif ($_POST["choixTypeLoc"] == 'loc') 
 		{
 			$this->load->view('espace/loc_form',$this->dataC);
 		}
-		elseif ($_POST["option1"] == 'hot') {
+		elseif ($_POST["choixTypeLoc"] == 'hot') {
 			$this->load->view('espace/hotel_form',$this->dataC);
 		}
-		elseif($_POST["option1"] == 'mh')
+		elseif($_POST["choixTypeLoc"] == 'mh')
 		{
 			
 			$this->load->view('espace/mhome_form',$this->dataC);		

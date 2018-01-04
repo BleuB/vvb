@@ -76,4 +76,16 @@ class User_model extends CI_Model
         $this->session->set_userdata('firstname', $resultat[0]['firstname']);
 
     }
+    //recup info membre
+     public function get_info($id){
+        $resultat = $this->db->select()
+                 ->from('user')
+                 ->where('id', $id)
+                 ->get()
+                 ->result_array();
+        foreach ($resultat as $key => $value){
+            $result = $$key = $value;
+        }
+        return $result;
+    }
 }

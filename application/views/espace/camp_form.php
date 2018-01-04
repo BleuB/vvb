@@ -1,3 +1,437 @@
-<p>
-	hello camp
-</p>
+<div class="row">
+	<form class="col-md-10 col-md-offset-1">
+		<h3 class="mid-title">Type d'hébergement</h3>
+		<div class="row">
+			<div class="radio col-md-3 col-md-offset-1">
+				<label>
+    				<input type="radio" name="optionsRadios"  value="camp" checked>
+    				Camping (emplacements)
+  				</label>
+			</div>
+			<div class="radio col-md-3">
+				<label>
+    				<input type="radio" name="optionsRadios"  value="mobilh">
+    				Mobil-hom(s)/Chalêt(s)
+  				</label>
+			</div>
+
+		</div>
+		<h3 class="mid-title">Services</h3>
+		<div class="row">
+			<div class="checkbox  col-md-2 col-md-offset-1">
+			  <label>
+			    <input type="checkbox" value="internet">
+			   	Accès internet
+			  </label>
+			</div>
+			<div class="checkbox  col-md-2">
+			  <label>
+			    <input type="checkbox" value="handicap">
+			   	Accès Handicapés
+			  </label>
+			</div>
+			<div class="checkbox  col-md-2">
+			  <label>
+			    <input type="checkbox" value="animaux">
+			   	Animaux acceptés
+			  </label>
+			</div>
+			<div class="checkbox  col-md-2">
+			  <label>
+			    <input type="checkbox" value="chequeVac">
+			   	Chèque Vacances acceptés
+			  </label>
+			</div>
+			
+		</div>
+		<div class="row">
+			<div class="checkbox  col-md-2 col-md-offset-1">
+			  <label>
+			    <input type="checkbox" value="dej">
+			   	Petit déjeuner compris
+			  </label>
+			</div>
+			
+			
+		</div>
+		<h3 class="mid-title">Informations Camping</h3>
+		<div class="row">
+			<div class="form-group col-md-3 col-md-offset-2">
+				<label>Durée minimum du séjour : </label>
+				<input class="form-control" type="text" placeholder="3 jours" name="dureeMinMB">
+			</div>
+			<div class="form-group col-md-3 col-md-offset-1">
+				<label>Surface moyenne des emplacements : </label>
+				<input class="form-control" type="text" placeholder="" name="surfEmp">
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-3 col-md-offset-2">
+				<label>Nombre d'emplacement : </label>
+				<input class="form-control" type="text" placeholder="" name="nbEmp">
+			</div>
+		</div>
+		<h3 class="mid-title">Informations Mobil Home</h3>
+		<div class="row">
+			<div class="form-group col-md-3 col-md-offset-2">
+				<label>Durée minimum du séjour : </label>
+				<input class="form-control" type="text" placeholder="3 jours" name="dureeMinMB">
+			</div>
+			<div class="form-group col-md-3 col-md-offset-1">
+				<label>Nb chambres :  </label>
+				<input class="form-control" type="text" placeholder="3" name="nbChambreMB">
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-3 col-md-offset-2">
+				<label>Capacité : </label>
+				<input class="form-control" type="text" placeholder="6 personnes" name="capaMB">
+			</div>
+			<div class="form-group col-md-3 col-md-offset-1">
+				<label>Surface en m² : </label>
+				<input class="form-control" type="text" placeholder="35" name="surfaceMB">
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-3 col-md-offset-2">
+				<label>Couchage :</label>
+				<input class="form-control" type="text" placeholder="4 + 2" name="couchMB">
+			</div>
+			
+		</div>
+		<h3 class="mid-title">Équipements Camping</h3>
+		<div class="row">
+			<div class="col-md-12">
+				<strong>Extérieur</strong> (5 maximum)
+				<div class="row">
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="sanitaire">
+					   	Sanitaires
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="bbqcamp">
+					   	Barbecue
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="piscinecamp">
+					   	Piscine
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="piscinecouvcamp">
+					   	Piscine couverte
+					  </label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="Jeux">
+					   	Jeux
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="douche">
+					   	Douches
+					  </label>
+					</div>
+					
+				</div>
+				<strong>Services</strong> (5 maximum)
+				<div class="row">
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="lave-linge">
+					   	Lave-linge
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="TV">
+					   	Télévision
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="bar">
+					   	Bar
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="resto">
+					   	Restaurant
+					  </label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="epicerie">
+					   	Épicerie
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="internet">
+					   	Internet
+					  </label>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		<h3 class="mid-title">Équipements Mobil Home</h3>
+		<div class="row">
+			<div class="col-md-12">
+				<strong>Intérieur</strong> (5 maximum)
+				<div class="row">
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="cuisine">
+					   	Cuisine équipée
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="lavelinge">
+					   	Lave-linge
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="lavevaisselle">
+					   	Lave-vaisselle
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="nonfumeur">
+					   	Logement non-fumeur
+					  </label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="microOnde">
+					   	Micro-onde
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="poele">
+					   	Poêle à bois
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="sechelinge">
+					   	Sèche-linge
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="tv">
+					   	Télévision
+					  </label>
+					</div>
+				</div>
+				<strong>Extérieur</strong> (5 maximum)
+				<div class="row">
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="piscine">
+					   	Piscine
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="jardin">
+					   	Jardin
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="jeux">
+					   	Jeux d'enfants
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="parking">
+					   	Parking
+					  </label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="terrasse">
+					   	Terrasse/Balcon
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="piscineCouv">
+					   	Piscine couverte
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="sport">
+					   	Salle de sport
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="salonJardin">
+					   	Sallon de jardin
+					  </label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="mer">
+					   	Vue sur mer
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="bbq">
+					   	Barbecue
+					  </label>
+					</div>
+				</div>
+				<strong>Services</strong> (5 maximum)
+				<div class="row">
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="drap">
+					   	Draps fournis
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="gite">
+					   	Gîte de F/Clé vacances
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="bebe">
+					   	Lit bébé
+					  </label>
+					</div>
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="menage">
+					    Ménage en option
+					  </label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="checkbox  col-md-2">
+					  <label>
+					    <input type="checkbox" value="vaiselle">
+					   	Vaisselle fournie
+					  </label>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<h3 class="mid-title"> Tarifs prix moyens</h3>
+		<div class="row">
+			<div class="col-md-6">
+				<strong>Prix du logement</strong>
+				<div class="row">
+					<div class="form-group col-md-8">
+						<label>Nuit hors saison* : </label>
+						<input class="form-control" type="text" placeholder="" name="prixhs"> 
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-8">
+						<label>Nuit pleine saison* : </label>
+						<input class="form-control" type="text" placeholder="" name="prixps"> 
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-8">
+						<label>Semaine hors saison* : </label>
+						<input class="form-control" type="text" placeholder="" name="prixSemhs"> 
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-8">
+						<label>Semaine pleine saison* : </label>
+						<input class="form-control" type="text" placeholder="" name="prixSemps"> 
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-8">
+						<label>Prix emplacement basse saison : </label>
+						<input class="form-control" type="text" placeholder="" name="prixEmpBS"> 
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-8">
+						<label>Prix emplacement haute saison : </label>
+						<input class="form-control" type="text" placeholder="" name="prixEmpHS"> 
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<strong>Promotions</strong>
+				<div class="row">
+					<div class="form-group col-md-8">
+						<label>Promo semaine : </label>
+						<input class="form-control" type="text" placeholder="" name="promoS"> 
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-8">
+						<label>Promo nuit : </label>
+						<input class="form-control" type="text" placeholder="" name="promoN"> 
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-8">
+						<label>Promo Mois : </label>
+						<input class="form-control" type="text" placeholder="" name="promoM"> 
+					</div>
+				</div>
+			</div>
+		</div>
+		<h3 class="mid-title">Description</h3>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="form-group col-md-8 col-md-offset-2">
+						<label>Descritpion courte* : </label>
+						<textarea class="form-control" placeholder="" name="shortDes"></textarea> 
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-8 col-md-offset-2">
+						<label>Descritpion longue* : </label>
+						<textarea class="form-control" placeholder="" name="longDes"></textarea> 
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<a href=""><button class="btn btn-default btn-log col-md-3 col-md-offset-4">Enregistrer</button></a>
+		</div>
+	</form>
+	
+</div>

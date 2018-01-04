@@ -97,7 +97,28 @@ class Annonces extends CI_Controller {
 
 	public function detail()
 	{
-		
+		$this->dataH['title'] = "Vacances vertes et bleues";
+		$this->dataH['description'] = "vacances vertes et bleues";
+		if ($this->isco) {
+			$this->dataHD['logged'] = true;
+		}
+		else{
+			$this->dataHD['logged'] = false;
+		}
+		$idann = $this->input->get('id');
+		$this->load->model('Annonce_model');
+		$this->load->model('User_model');
+		$this->dataC['annonce_type'] = $this->Annonce_model->get_types();
+		$this->dataC["annonce"]=$this->Annonce_model->get_annonce($idann);
+		$this->dataC['images']=$this->Annonce_model->get_images($idann);
+		$this->dataC['infos_client'] = $this->User_model->get_info($this->dataC['annonce']['id_user']);
+
+
+		//affichage
+		$this->load->view('common/head',$this->dataH);
+		$this->load->view('common/header',$this->dataHD);
+		$this->load->view('Annonces/detail',$this->dataC);
+		$this->load->view('common/footer');
 	}
 
 }

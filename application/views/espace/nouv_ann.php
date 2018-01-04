@@ -99,25 +99,25 @@
 					<div class="row">
 						<div class="radio col-md-3">
 	  						<label>
-	   							<input type="radio" name="option1" value="cm">
+	   							<input type="radio" name="choixTypeLoc" value="cm">
 	    						Camping - MobilHome
 	  						</label>
 						</div>
 						<div class="radio col-md-3">
 	  						<label>
-	   							<input type="radio" name="option1" value="mh">
+	   							<input type="radio" name="choixTypeLoc" value="mh">
 	    						MobilHome
 	  						</label>
 						</div>
 						<div class="radio col-md-3">
 	  						<label>
-	   							<input type="radio" name="option1" value="loc">
+	   							<input type="radio" name="choixTypeLoc" value="loc">
 	    						Location
 	  						</label>
 						</div>
 						<div class="radio col-md-3">
 	  						<label>
-	   							<input type="radio" name="option1" value="hot">
+	   							<input type="radio" name="choixTypeLoc" value="hot">
 	    						Hôtel
 	  						</label>
 						</div>

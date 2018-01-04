@@ -107,7 +107,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<img src="<?php echo $ann['photocouv'];?>" class="thumbnail img-responsive" />
 				</div>
 				<div class="col-md-6 col-xs-12">
-					<a class="lien_ann" href=""><h3><?php echo $ann['title'];?></h3></a>
+					<a class="lien_ann" href="<?php echo site_url("Annonces/detail").'?id='.$ann['id'].'&'.$ann['urlann'];?>"><h3><?php echo $ann['title'];?></h3></a>
 					<h4><?php echo $ann['departement']; echo " (".$ann['region'].")";?></h4>
 					<p><?php echo $ann['descr_courte'];?></p>
 				</div>
@@ -131,7 +131,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<p><?php echo $ann['prixbas']['periode'];?></p>
 					<p></p>
 					
-					<a href=""><button type="submit" class="btn btn-default btn-dec" >Découvrir</button></a>
+					<a href="<?php echo site_url("Annonces/detail");?>"><button type="submit" class="btn btn-default btn-dec" >Découvrir</button></a>
 				</div>
 			</div>
 			<?php }?>

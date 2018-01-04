@@ -56,11 +56,11 @@ class Annonce_model extends CI_Model
             $result[$i]['photocouv'] = $this->recup_photo_couv($result[$i]['id']);
             $result[$i]['region'] = $this->region($result[$i]['region']);
             $result[$i]['departement'] = $this->dep($result[$i]['departement']);
-           /* $result[$i]['urlann'] =  url_title($result[$i]['title']);
+            $result[$i]['urlann'] =  url_title($result[$i]['title']);
             $result[$i]['urlann'] .= '-';
             $result[$i]['urlann'] .= url_title($result[$i]['region']);
             $result[$i]['urlann'] .= '-';
-            $result[$i]['urlann'] .= url_title($result[$i]['departement']);*/
+            $result[$i]['urlann'] .= url_title($result[$i]['departement']);
             $i++;
         }
         return $result;
@@ -72,6 +72,43 @@ class Annonce_model extends CI_Model
         $this->db->from('annonce');
         $result = $this->db->count_all_results();
         return $result;
+    }
+
+    // liste une annonce (detai)
+    public function get_annonce($id)
+    {
+        $resultat = $this->db->select()
+                    ->from('annonce')
+                    ->where('id', $id)
+                    ->get()
+                    ->result_array();
+        foreach ($resultat as $key => $value){
+            $result = $$key = $value;
+        }
+
+       
+        return $result;
+    }
+
+     //recupère les images d'une annonce
+    public function get_images($id)
+    {
+        $result = $this->db->select('file')
+                            ->from('annonce_file')
+                            ->where('id_item',$id)
+                            ->get()
+                            ->result_array();
+        return $result;
+    }
+
+      // liste des types des annonces
+    public function get_types()
+    {
+        $row = $this->db->select()
+                    ->from('annonce_type')
+                    ->get()
+                    ->result_array();
+        return $row;
     }
 
 
