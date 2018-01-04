@@ -38,7 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</li>
 
 				<li>
-					<a href="<?php echo site_url("login"); ?>">
+					<a href="<?php echo site_url("compte"); ?>">
 						<?php if($logged){?>
 							<i class="fa fa-user" aria-hidden="true"></i>
 						<?php }else{?>
@@ -47,13 +47,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</a>
 				</li>
 				<?php if($logged){?>
-					<li><a href="<?php echo site_url("login/remonteAnnonce");?>">Crédits : 0</a></li>
+					<li><a href="<?php echo site_url("compte/remonteAnnonce");?>">Crédits : 0</a></li>
 					<li><a href="<?php echo site_url('Home?deco'); ?>">Déconnexion</a></li>
 
 				<?php }?>
 
 				
-				<li id="passe_ann"><a href="<?php echo site_url('nouv_ann'); ?>">Passer une annonce</a></li>
+				<li id="passe_ann"><a href="<?php echo site_url('compte/nouv_ann'); ?>">Passer une annonce</a></li>
 
 				
 			</ul>

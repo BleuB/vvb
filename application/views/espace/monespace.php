@@ -44,10 +44,10 @@
 							<h3>Mes Annonces</h3>
 							<div class="row">
 								<div class="col-md-5 col-md-offset-2"> 
-									<button type="button" name="ajoutAnn" class="btn btn-lg btn-vvb "><i class="fa fa-plus" aria-hidden="true"></i> Ajouter une annonce</button>
+									<a href="<?php echo site_url('compte/nouv_ann'); ?>"><button type="button" name="ajoutAnn" class="btn btn-lg btn-vvb "><i class="fa fa-plus" aria-hidden="true"></i> Ajouter une annonce</button></a>
 								</div>
 								<div class="col-md-5">
-									<a class="" href="<?php echo site_url("login/remonteAnnonce");?>"><h3 >Comment remonter votre Annonce ?</h3></a>
+									<a class="" href="<?php echo site_url("compte/remonteAnnonce");?>"><h3 >Comment remonter votre Annonce ?</h3></a>
 								</div>
 								
 							</div>
@@ -80,7 +80,7 @@
 													<p class="text-info">Cette annonce expire dans : <strong>6 mois</strong></p>
 													<a href="#" class="btn btn-info center-block"><i class="fa fa-repeat" aria-hidden="true"></i> Renouveler</a>
 													<hr>
-													<a href="<?php echo site_url("login/ModifAnnonce");?>" class="btn btn-default center-block"><i class="fa fa-pencil" aria-hidden="true"></i> Modifier</a>
+													<a href="<?php echo site_url("compte/ModifAnnonce");?>" class="btn btn-default center-block"><i class="fa fa-pencil" aria-hidden="true"></i> Modifier</a>
 													<br>
 													<a href="#" class="btn btn-default center-block text-danger"><i class="fa fa-ban" aria-hidden="true"></i> Désactiver</a>
 												</div>
@@ -103,7 +103,7 @@
 													<p class="text-info">Cette annonce expire dans : <strong>6 mois</strong></p>
 													<a href="#" class="btn btn-info center-block"><i class="fa fa-repeat" aria-hidden="true"></i> Renouveler</a>
 													<hr>
-													<a href="<?php echo site_url("login/ModifAnnonce");?>" class="btn btn-default center-block"><i class="fa fa-pencil" aria-hidden="true"></i> Modifier</a>
+													<a href="<?php echo site_url("compte/ModifAnnonce");?>" class="btn btn-default center-block"><i class="fa fa-pencil" aria-hidden="true"></i> Modifier</a>
 													<br>
 													<a href="#" class="btn btn-default center-block text-danger"><i class="fa fa-ban" aria-hidden="true"></i> Désactiver</a>
 												</div>
@@ -139,7 +139,7 @@
 													<p class="text-info">Cette annonce expire dans : <strong>6 mois</strong></p>
 													<a href="#" class="btn btn-info center-block"><i class="fa fa-repeat" aria-hidden="true"></i> Renouveler</a>
 													<hr>
-													<a href="<?php echo site_url("login/ModifAnnonce");?>" class="btn btn-default center-block"><i class="fa fa-pencil" aria-hidden="true"></i> Modifier</a>
+													<a href="<?php echo site_url("compte/ModifAnnonce");?>" class="btn btn-default center-block"><i class="fa fa-pencil" aria-hidden="true"></i> Modifier</a>
 													<br>
 													<a href="#" class="btn btn-success center-block"><i class="fa fa-check" aria-hidden="true"></i> Activer</a>
 												</div>

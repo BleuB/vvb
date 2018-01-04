@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Compte extends CI_Controller {
 	private $dataH = array();//data head
 	private $dataHd = array();//data header
 	private $dataC = array();//data corp
@@ -89,4 +89,71 @@ class Login extends CI_Controller {
 		$this->load->view('common/footer');
 	
 	}
+
+	 public function nouv_ann()
+    {
+    	$this->dataH['title'] = "Vacances vertes et bleues";
+		$this->dataH['description'] = "vacances vertes et bleues";
+		if ($this->isco) {
+			$this->dataHD['logged'] = true;
+		}
+		else{
+			$this->dataHD['logged'] = false;
+		}
+
+		
+
+		//affichage
+		$this->load->view('common/head',$this->dataH);
+		$this->load->view('common/header',$this->dataHD);
+		if ($this->isco) {
+			$this->load->view('espace/nouv_ann',$this->dataC);		
+		}
+		else
+		{
+			$this->load->view("espace/login");
+		}
+		
+		$this->load->view('common/footer');
+    }
+
+    public function nextEtape()
+    {
+    	$this->dataH['title'] = "Vacances vertes et bleues";
+		$this->dataH['description'] = "vacances vertes et bleues";
+		if ($this->isco) {
+			$this->dataHD['logged'] = true;
+		}
+		else{
+			$this->dataHD['logged'] = false;
+		}
+
+		
+
+		//affichage
+		$this->load->view('common/head',$this->dataH);
+		$this->load->view('common/header',$this->dataHD);
+		if (!isset($_POST["option1"])) {
+			$this->load->view("home/accueil");
+		}
+		elseif($_POST["option1"] == 'cm')
+		{
+			$this->load->view('espace/camp_form',$this->dataC);
+		}
+		elseif ($_POST["option1"] == 'loc') 
+		{
+			$this->load->view('espace/loc_form',$this->dataC);
+		}
+		elseif ($_POST["option1"] == 'hot') {
+			$this->load->view('espace/hotel_form',$this->dataC);
+		}
+		elseif($_POST["option1"] == 'mh')
+		{
+			
+			$this->load->view('espace/mhome_form',$this->dataC);		
+
+		}
+		
+		$this->load->view('common/footer');
+    }
 }

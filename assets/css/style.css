@@ -282,6 +282,7 @@ svg
 	color: white;
 	margin-left: 30%;
 	margin-top: 20px;
+	margin-bottom: 20px;
 	width: 40%;
 	font-size: 1.3em;
 
@@ -398,6 +399,12 @@ label h4
 	border-bottom:solid 2px #1D8AC9;
 }
 
+/*------------------------------------------form nouvelle annonce -------------------------------------*/
+
+.checkbox + .checkbox, .radio + .radio
+{
+	margin-top: 10px;
+}
 
 
 

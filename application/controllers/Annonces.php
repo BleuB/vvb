@@ -64,20 +64,27 @@ class Annonces extends CI_Controller {
 		$config['page_query_string'] = TRUE;
         $config['reuse_query_string'] = TRUE;
 
+        if (!isset($_GET['per_page'])) {
+        	$ppage = 0;
+        }
+        else{
+        	$ppage = $_GET['per_page'];
+        }
+
         $this->pagination->initialize($config);
 		$this->dataC['pagination']=$this->pagination->create_links();
 
-		$this->load->model('Rech_annonces_model');
 		
-		$this->dataC['regions']=$this->Rech_annonces_model->get_regions();
+		
+		$this->dataC['regions']=$this->Annonce_model->get_regions();
 		
 		//action si requete region seule
         if (isset($_GET['region'])) {
             $recher = array('region' => $_GET['region'] );
-          	$this->dataC['annonces'] = $this->Annonce_model->get_annonces_rech(10,$recher);
+          	$this->dataC['annonces'] = $this->Annonce_model->get_annonces_rech($ppage,$config['per_page'],$recher);
         }else
         {
-        	$this->dataC['annonces']=$this->Annonce_model->get_annonces_rech();
+        	$this->dataC['annonces']=$this->Annonce_model->get_annonces_rech($ppage,$config['per_page']);
         }
 	
 
@@ -86,6 +93,11 @@ class Annonces extends CI_Controller {
 		$this->load->view('common/header',$this->dataHD);
 		$this->load->view('Annonces/rech_annonces',$this->dataC);
 		$this->load->view('common/footer');
+	}
+
+	public function detail()
+	{
+		
 	}
 
 }

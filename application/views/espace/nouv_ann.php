@@ -9,7 +9,7 @@
 </div>
 <div class="row">
 	
-	<form>
+	<form method="post" action="<?php echo site_url("compte/nextEtape");?>">
 		<div class="col-md-10 col-md-offset-1">
 			<div class="row">
 				<div class=" col-md-4 col-md-offset-1 form-group">
@@ -99,20 +99,26 @@
 					<div class="row">
 						<div class="radio col-md-3">
 	  						<label>
-	   							<input type="radio" name="option1" value="">
-	    						1
+	   							<input type="radio" name="option1" value="cm">
+	    						Camping - MobilHome
 	  						</label>
 						</div>
 						<div class="radio col-md-3">
 	  						<label>
-	   							<input type="radio" name="option1" value="">
-	    						1
+	   							<input type="radio" name="option1" value="mh">
+	    						MobilHome
 	  						</label>
 						</div>
 						<div class="radio col-md-3">
 	  						<label>
-	   							<input type="radio" name="option1" value="">
-	    						1
+	   							<input type="radio" name="option1" value="loc">
+	    						Location
+	  						</label>
+						</div>
+						<div class="radio col-md-3">
+	  						<label>
+	   							<input type="radio" name="option1" value="hot">
+	    						Hôtel
 	  						</label>
 						</div>
 
@@ -122,6 +128,9 @@
 				
 				</div>
 				
+			</div>
+			<div class="row">
+				<button class="btn btn-default btn-log" name="suivant">Suivant <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
 			</div>
 	</div>
 		

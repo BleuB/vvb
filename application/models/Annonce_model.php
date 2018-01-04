@@ -41,13 +41,13 @@ class Annonce_model extends CI_Model
     }
 
        //get liste annonce par recehrche
-    function get_annonces_rech($limit = 10, $rek = array()){
+    function get_annonces_rech($offset, $limit, $rek = array()){
         $i=0;
         $resultat = $this->db->select()
                             ->from('annonce')
                             ->where($rek)
-                            ->limit($limit)
-                            ->order_by('title', 'RANDOM')
+                            ->limit($limit,$offset)
+                            ->order_by('title')
                             ->get()
                             ->result_array();
         foreach ($resultat as $key => $value){
@@ -175,6 +175,27 @@ class Annonce_model extends CI_Model
                     ->result_array();
         return $row;
     }
+
+    public function get_regions()
+    {
+        $res=$this->db->select()
+                        ->from('regions')
+                        ->get()
+                        ->result_array();
+
+        return $res;
+    }
+
+    public function get_dep_by_region($reg)
+    {
+        $res=$this->select
+                    ->from('dpartement')
+                    ->where('id_region',$reg)
+                    ->get()
+                    ->result_array();
+        return $res;
+    }
+
 
  }
 

@@ -26,6 +26,7 @@ class User_model extends CI_Model
     public function connect($mail,$pass){
         //  Chargement de la bibliothèque
         $valid = false;
+        $this->load->library("form_validation");
         $pass = md5($pass);
         $resultat = $this->db->select('email,pass')
                  ->from('user')
@@ -49,12 +50,30 @@ class User_model extends CI_Model
         if($this->form_validation->run())
         {
             $valid = true;
-            $this->sess_start($mail);
+        $this->sess_start($mail);
+            
         }
+        
         return $valid;
+
     }
     //deconnection et destruction session
     public function deco(){
         $this->session->unset_userdata('userco');
+    }
+
+    //mise en session d'un membre
+    public function sess_start($mail){
+        $resultat = $this->db->select('email,id,lastname,firstname')
+                 ->from('user')
+                 ->where('email', $mail)
+                 ->get()
+                 ->result_array();
+        $this->session->set_userdata('connected', true);
+        $this->session->set_userdata('id', $resultat[0]['id']);
+        $this->session->set_userdata('lastname', $resultat[0]['lastname']);
+        $this->session->set_userdata('email', $resultat[0]['email']);
+        $this->session->set_userdata('firstname', $resultat[0]['firstname']);
+
     }
 }

@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="row">
 			<h2 class="col-md-8 col-md-offset-2 title_login">Déjà inscrit ? identifiez-vous !</h2>
 		</div>
-		<form class="col-md-6 col-md-offset-3" method="post" action="<?php echo site_url("login");?>">
+		<form class="col-md-6 col-md-offset-3" method="post" action="<?php echo site_url("compte");?>">
 			<div class="form-group">
 				<input type="email" class="form-control" name="mail" placeholder="E-mail">
 			</div>
