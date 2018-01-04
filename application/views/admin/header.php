@@ -30,14 +30,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <a href="<?php echo site_url('admin'); ?>" ><i class="fa fa-desktop "></i>Accueil</a>
                     </li>
                     <li <?php if ($thispage == 'pub') {echo 'class="active-link"';}?>>
-                        <a href="<?php echo site_url('admin/pub'); ?>"><i class="fa fa-th-list"></i>Publicités</a>
-                    </li>
-                    <!-- <li <?php if ($thispage == 'produits') {echo 'class="active-link"';}?>>
-                        <a href="<?php echo site_url('admin/produits'); ?>"><i class="fa fa-edit"></i>Produits</a>
+                        <a href="<?php echo site_url('admin/pub'); ?>"><i class="fa fa-edit"></i>Publicités</a>
                     </li>
                     <li <?php if ($thispage == 'clients') {echo 'class="active-link"';}?>>
                         <a href="<?php echo site_url('admin/clients'); ?>"><i class="fa fa-address-book"></i>Clients</a>
-                    </li> -->
+                    </li>
+                    <li <?php if ($thispage == 'annonces') {echo 'class="active-link"';}?>>
+                        <a href="<?php echo site_url('admin/annonces'); ?>"><i class="fa fa-th-list"></i>Annonces</a>
+                    </li>
                 </ul>
             </div>
         </nav>

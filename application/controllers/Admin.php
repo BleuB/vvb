@@ -90,10 +90,93 @@ class Admin extends CI_Controller {
 		}
 		$this->load->view('admin/footer');
 	}
+	public function clients()
+	{
+		$this->dataH['title'] = "Administration";
+		$this->dataH['description'] = "";
+		$this->dataH['thispage'] = "clients";
+		if ($this->isco) {
+			$this->dataHD['logged'] = true;
+		}
+		else{
+			$this->dataHD['logged'] = false;
+		}
+		
+		
+		$this->dataC['totalClients'] = $totalClients = $this->admin_model->total_clients();
+		
+		$this->load->library('pagination');
+		$config['base_url']=site_url('admin/clients'); 
+    	$config['total_rows'] =$totalClients;
+		$config['per_page'] = 20;
+		$config['next_link'] =  '<i class="fa fa-chevron-right" aria-hidden="true"></i>';
+        $config['prev_link'] =  '<i class="fa fa-chevron-left" aria-hidden="true"></i>';
+        $config['first_link']='<i class="fa fa-chevron-left" aria-hidden="true"></i><i class="fa fa-chevron-left" aria-hidden="true"></i>';
+        $config['last_link']='<i class="fa fa-chevron-right" aria-hidden="true"></i><i class="fa fa-chevron-right" aria-hidden="true"></i>';
+
+		$config['page_query_string'] = TRUE;
+        $config['reuse_query_string'] = TRUE;
+
+        $this->pagination->initialize($config);
+        if (!isset($_GET['per_page'])) {
+        	$offset = 0;
+        }
+        else{
+        	$offset = $_GET['per_page'];
+        }
+        $this->dataC['listClients'] = $this->admin_model->list_clients($offset,$config['per_page']);
+		$this->dataC['pagination']=$this->pagination->create_links();
+		
+		//affichage
+		$this->load->view('admin/head',$this->dataH);
+		$this->load->view('admin/header',$this->dataHD);
+		if (!$this->isco) {
+			$this->load->view('admin/register');
+		}
+		else{
+			$this->load->view('admin/clients',$this->dataC);
+		}
+		$this->load->view('admin/footer');
+	}
+	public function annonces()
+	{
+		$this->dataH['title'] = "Administration";
+		$this->dataH['description'] = "";
+		$this->dataH['thispage'] = "annonces";
+		if ($this->isco) {
+			$this->dataHD['logged'] = true;
+		}
+		else{
+			$this->dataHD['logged'] = false;
+		}
+
+
+
+		//affichage
+		$this->load->view('admin/head',$this->dataH);
+		$this->load->view('admin/header',$this->dataHD);
+		if (!$this->isco) {
+			$this->load->view('admin/register');
+		}
+		else{
+			$this->load->view('admin/annonces');
+		}
+		$this->load->view('admin/footer');
+	}
+
+
+
+
+
+
+
+
+	//fonctions ajax
 	public function ajaxUpdateActif(){
 		$this->load->model('Pub_model');
 		$this->Pub_model->updateActif($_POST['i'],$_POST['c']);
 	}
+	//fenetres pop up
 	public function modifPubs(){
 		
 		$this->load->model('Pub_model');
