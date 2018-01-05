@@ -43,8 +43,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script type="text/javascript">
 	$(document).on('lity:open', function(event, instance) {
    		var id = instance.opener().attr('data-id');
-   		//console.log(id);
-   		$.post( "<?php echo site_url('admin/ajaxClientsDetail'); ?>",{i:id},'json').done(function(data2){alert("data = " +data2)});
+   		$('.lity-container').css('background-color','white');
+   		$.ajax({
+            type : 'POST',
+            url : "<?php echo site_url('admin/ajaxClientsDetail'); ?>",
+            data: { i:id },
+            dataType : "json",
+            success : function(data){
+             	console.log(data[0].email,data[0].id);
+             	$('form',this).children('#inputNom').attr('value',data[0].id);
+            },
+		});
 	});
 </script>
 

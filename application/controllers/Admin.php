@@ -178,7 +178,7 @@ class Admin extends CI_Controller {
 	}
 	public function ajaxClientsDetail(){
 		$detail = $this->admin_model->detail_client($_POST['i']);
-		return json_encode($detail);
+		echo json_encode($detail);
 	}
 
 }
