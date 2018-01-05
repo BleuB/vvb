@@ -10,6 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo js_url('lity.min'); ?>"></script>
 <script type="text/javascript" src="<?php echo js_url('admin_js'); ?>"></script>
+<?php if ($thispage == "pub") { ?>
 <script type="text/javascript">
 	$('.button-actif').click(function(){
 		var toChange;
@@ -28,7 +29,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		
 	});
 </script>
-<?php if ($thispage == "pub") { ?>
 <script type="text/javascript">
 	$(document).on('lity:open', function(event, instance) {
    		var ur = instance.opener().attr('data-url');
@@ -39,6 +39,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	});
 </script>	
 <?php } ?>
+<?php if ($thispage == "clients") { ?>
+<script type="text/javascript">
+	$(document).on('lity:open', function(event, instance) {
+   		var id = instance.opener().attr('data-id');
+   		//console.log(id);
+   		$.post( "<?php echo site_url('admin/ajaxClientsDetail'); ?>",{i:id},'json').done(function(data2){alert("data = " +data2)});
+	});
+</script>
 
+<?php } ?>
 </body>
 </html>
