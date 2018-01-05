@@ -60,9 +60,9 @@
             </div>
           </div> <!-- /slider -->
 
-          <div class="col-md-4"> <!-- infos -->
+          <div  class="col-md-4"> <!-- infos -->
             
-            <h3>Informations</h3>
+            <h3 class="mid-title">Informations</h3>
             <div class="row">
             	<div class="col-md-6">
 	              <ul class="list-unstyled">
@@ -78,11 +78,11 @@
 	                <li>Surface : <strong><?php echo $annonce['surface']; ?></strong></li>
 	              </ul>
 	            </div>
-			</div>
+			       </div>
 
           </div>
           <div class="col-xs-12 col-md-4">
-            <h3>Description</h3>
+            <h3 class="mid-title">Description</h3>
             <p class="text-justify">
               <?php echo $annonce['descr_longue']; ?>
             </p>
@@ -93,7 +93,7 @@
 
   
   <div class="row">
-          <div class="hidden-xs col-md-4">
+          <div class="hidden-xs col-md-4 " >
             
                 
                 <?//php $nbSlides = count($images); ?>
@@ -106,27 +106,27 @@
           
           </div>
           <div class="col-xs-12 col-md-7"> <!-- tarifs -->
-            <h3>À partir de</h3>
+            <h3 class="mid-title">À partir de</h3>
             <div class="row">
               <div class="col-xs-6 col-sm-6 col-md-6  text-center-on-sm">
                 <h4>Hors Saison</h4>
                 <p>
-                  <strong class="h1"><?php echo $annonce['hsnuit']; ?> €</strong>
+                  <strong ><?php echo $annonce['hsnuit']; ?> €</strong>
                   La nuit
                 </p>
                 <p>
-                  <strong class="h1"><?php echo $annonce['hsweek']; ?> €</strong>
+                  <strong ><?php echo $annonce['hsweek']; ?> €</strong>
                   La semaine
                 </p>
               </div>
               <div class="col-xs-6 col-sm-6 col-md-6  text-center-on-sm">
                 <h4>Pleine Saison</h4>
                 <p>
-                  <strong class="h1"><?php echo $annonce['psnuit']; ?> €</strong>
+                  <strong ><?php echo $annonce['psnuit']; ?> €</strong>
                   La nuit
                 </p>
                 <p>
-                  <strong class="h1"><?php echo $annonce['psweek']; ?> €</strong>
+                  <strong><?php echo $annonce['psweek']; ?> €</strong>
                   La semaine
                 </p>
               </div>
@@ -139,7 +139,7 @@
           
 
           <div class="col-xs-12 col-md-4"> <!-- maps -->
-            <h3>Localisation</h3>
+            <h3 class="mid-title">Localisation</h3>
             <div class="thumbnail">
               <div class="map_responsive">
                 <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=<?php echo str_replace(" ", "+ ", $annonce['adress'] . " " . $annonce['cp'] . "
@@ -149,7 +149,7 @@
           </div>
 
           <div class="col-xs-12 col-md-4"> <!-- contact -->
-            <h3>Contacter le propriétaire</h3>
+            <h3 class="mid-title">Contacter le propriétaire</h3>
             <table class="table table-condensed">
               <tr>
                 <td><i class="fa fa-user" aria-hidden="true" title="Fixe"></i></td>
