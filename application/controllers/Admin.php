@@ -101,7 +101,9 @@ class Admin extends CI_Controller {
 		else{
 			$this->dataHD['logged'] = false;
 		}
-		
+		if (isset($_POST['modif'])) {
+			$this->admin_model->modif_client($_POST);
+		}
 		
 		$this->dataC['totalClients'] = $totalClients = $this->admin_model->total_clients();
 		

@@ -50,12 +50,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             data: { i:id },
             dataType : "json",
             success : function(data){
-             	console.log(data[0].email,data[0].id);
+             	//console.log(data[0].email,data[0].id);
+             	$('#inputId').attr('value',data[0].id);
              	$('#inputNom').attr('value',data[0].lastname);
              	$('#inputPrenom').attr('value',data[0].firstname);
              	$('#inputAdresse').attr('value',data[0].address);
              	$('#inputCP').attr('value',data[0].postcode);
              	$('#inputVille').attr('value',data[0].city);
+             	$('#inputTel').attr('value',data[0].phone);
+             	$('#inputPortable').attr('value',data[0].mobile);
+             	$('#inputFax').attr('value',data[0].fax);
+             	$('#inputMail').attr('value',data[0].email);
+             	$('#inputWeb').attr('value',data[0].url);
             },
 		});
 	});

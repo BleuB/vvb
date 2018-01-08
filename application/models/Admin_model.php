@@ -50,4 +50,21 @@ class Admin_model extends CI_Model
                     ->result_array();
         return $row;
     }
+    //modif client
+    public function modif_client($post){
+        $data = array(
+                'url'  => $post['url'],
+                'lastname' => $post['lastname'],
+                'firstname' => $post['firstname'],
+                'address' => $post['url'],
+                'postcode' => $post['postcode'],
+                'city' => $post['url'],
+                'phone' =>$post['phone'],
+                'mobile' => $post['mobile'],
+                'fax' => $post['fax'],
+                'email' => $post['email']
+        );
+        $this->db->where('id', $post['id']);
+        $this->db->update('user', $data);
+    }
 }
