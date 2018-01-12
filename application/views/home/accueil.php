@@ -144,7 +144,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<p><?php echo $ann['prixbas']['periode'];?></p>
 					<p></p>
 					
-					<a href="<?php echo site_url("Annonces/detail");?>"><button type="submit" class="btn btn-default btn-dec" >Découvrir</button></a>
+					<a href="<?php echo site_url('Annonces/detail').'?id='.$ann['id'];?>"><button type="submit" class="btn btn-default btn-dec" >Découvrir</button></a>
 				</div>
 			</div>
 			<?php } ?>

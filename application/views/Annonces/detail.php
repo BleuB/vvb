@@ -6,7 +6,7 @@
           <h2 class="col-md-12"><?php echo $annonce['title']; ?></h2>
             
         </div>
-        <div class="row">  
+        <div class="row" style="text-align: center;" >  
               <h4 class="col-md-12"><?php echo $annonce['town']; ?></h4>
         </div>
         </section>
@@ -142,7 +142,7 @@
             <h3 class="mid-title">Localisation</h3>
             <div class="thumbnail">
               <div class="map_responsive">
-                <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=<?php echo str_replace(" ", "+ ", $annonce['adress'] . " " . $annonce['cp'] . "
+                <iframe width="600" height="450" frameborder="0" style="border:0;max-width: 100%;" src="https://www.google.com/maps/embed/v1/place?q=<?php echo str_replace(" ", "+ ", $annonce['adress'] . " " . $annonce['cp'] . "
                   " . $annonce['town']); ?>&key=AIzaSyCVJ3Q1FZbMOBBdpgXHElbvNIk4t5myAkI&zoom=9" allowfullscreen></iframe>
               </div>
             </div>

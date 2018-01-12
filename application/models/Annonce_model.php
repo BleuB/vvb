@@ -77,6 +77,7 @@ class Annonce_model extends CI_Model
     // liste une annonce (detai)
     public function get_annonce($id)
     {
+        $result = array();
         $resultat = $this->db->select()
                     ->from('annonce')
                     ->where('id', $id)
@@ -85,8 +86,6 @@ class Annonce_model extends CI_Model
         foreach ($resultat as $key => $value){
             $result = $$key = $value;
         }
-
-       
         return $result;
     }
 
