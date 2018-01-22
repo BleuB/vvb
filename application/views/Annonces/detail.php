@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <ul class="hide-bullets">
                     <li class="col-sm-12">
                         <a class="thumbnail" id="carousel-selector-0">
-                            <img src="http://placehold.it/150x150&text=zero">
+                            <img src="<?php echo img_url("annonces/".$annonce['couv']); ?>">
                         </a>
                     </li>
 
@@ -94,10 +94,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="row">
                         <div class="col-sm-12" id="carousel-bounding-box">
                             <div class="carousel slide" id="myCarousel">
+                            <?php // print_r($images);echo $annonce['couv']; ?>
                                 <!-- Carousel items -->
                                 <div class="carousel-inner">
                                     <div class="active item" data-slide-number="0">
-                                        <img src="http://placehold.it/470x480&text=zero"></div>
+                                        <img src="<?php echo img_url("annonces/".$annonce['couv']); ?>">
+                                    </div>
 
                                     <div class="item" data-slide-number="1">
                                         <img src="http://placehold.it/470x480&text=1"></div>
