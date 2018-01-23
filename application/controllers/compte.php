@@ -31,6 +31,7 @@ class Compte extends CI_Controller {
 	{
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
+		$this->dataH['thispage'] = "compte";
 		if ($this->isco) {
 			$this->dataHD['logged'] = true;
 		}
@@ -56,6 +57,7 @@ class Compte extends CI_Controller {
 	{
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
+		$this->dataH['thispage'] = "remonte";
 		if ($this->isco) {
 			$this->dataHD['logged'] = true;
 		}
@@ -75,6 +77,7 @@ class Compte extends CI_Controller {
 	{
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
+		$this->dataH['thispage'] = "modifannonce";
 		if ($this->isco) {
 			$this->dataHD['logged'] = true;
 		}
@@ -94,6 +97,7 @@ class Compte extends CI_Controller {
     {
     	$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
+		$this->dataH['thispage'] = "nouvann";
 		if ($this->isco) {
 			$this->dataHD['logged'] = true;
 		}
@@ -121,6 +125,7 @@ class Compte extends CI_Controller {
     {
     	$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
+		$this->dataH['thispage'] = "nextetape";
 		if ($this->isco) {
 			$this->dataHD['logged'] = true;
 		}

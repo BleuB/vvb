@@ -31,6 +31,7 @@ class Conseil extends CI_Controller {
 	{
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
+		$this->dataH['thispage'] = "conseils";
 		if ($this->isco) {
 			$this->dataHD['logged'] = true;
 		}
@@ -51,6 +52,7 @@ class Conseil extends CI_Controller {
 	{
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
+		$this->dataH['thispage'] = "preco";
 		if ($this->isco) {
 			$this->dataHD['logged'] = true;
 		}
@@ -71,6 +73,7 @@ class Conseil extends CI_Controller {
 	{
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
+		$this->dataH['thispage'] = "demander";
 		if ($this->isco) {
 			$this->dataHD['logged'] = true;
 		}
@@ -91,6 +94,7 @@ class Conseil extends CI_Controller {
 	{
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
+		$this->dataH['thispage'] = "resa";
 		if ($this->isco) {
 			$this->dataHD['logged'] = true;
 		}
@@ -111,6 +115,7 @@ class Conseil extends CI_Controller {
 	{
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
+		$this->dataH['thispage'] = "demarche";
 		if ($this->isco) {
 			$this->dataHD['logged'] = true;
 		}
@@ -131,6 +136,7 @@ class Conseil extends CI_Controller {
 	{
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
+		$this->dataH['thispage'] = "recours";
 		if ($this->isco) {
 			$this->dataHD['logged'] = true;
 		}

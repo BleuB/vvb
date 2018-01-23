@@ -33,6 +33,7 @@ class Annonces extends CI_Controller {
 
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
+		$this->dataH['thispage'] = "rech_annonce";
 		if ($this->isco) {
 			$this->dataHD['logged'] = true;
 		}
@@ -99,6 +100,7 @@ class Annonces extends CI_Controller {
 	{
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
+		$this->dataH['thispage'] = "detail";
 		if ($this->isco) {
 			$this->dataHD['logged'] = true;
 		}

@@ -31,6 +31,7 @@ class Home extends CI_Controller {
 	{
 		$this->dataH['title'] = "Vacances vertes et bleues";
 		$this->dataH['description'] = "vacances vertes et bleues";
+		$this->dataH['thispage'] = "home";
 		if ($this->isco) {
 			$this->dataHD['logged'] = true;
 		}
