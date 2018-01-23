@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="row">
                         <div class="col-sm-12" id="carousel-bounding-box">
                             <div class="carousel slide" id="myCarousel">
-                            <?php // print_r($images);echo $annonce['couv']; ?>
+                            <?php //// print_r($images);echo $annonce['couv']; ?>
                                 <!-- Carousel items -->
                                 <div class="carousel-inner">
                                     <div class="active item" data-slide-number="0">
